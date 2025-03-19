@@ -1,0 +1,44 @@
+import os
+import re
+
+def split_novel_by_chapters(input_file, output_dir):
+    # 获取原始文件名（不含扩展名），用于创建子文件夹
+    base_filename = os.path.splitext(os.path.basename(input_file))[0]
+    output_subdir = os.path.join(output_dir, base_filename)
+
+    # 确保输出子目录存在
+    if not os.path.exists(output_subdir):
+        os.makedirs(output_subdir)
+
+    # 读取整个小说文本
+    with open(input_file, 'r', encoding='utf-8') as file:
+        content = file.read()
+
+    # 使用正则表达式匹配章节标题，例如“第1章”或“第十章”
+    chapters = re.split(r'(第[一二三四五六七八九十百千0-9]+章)', content)
+
+    # 如果分割后的列表长度小于 3，说明没有匹配到章节
+    if len(chapters) < 3:
+        print("未找到章节分隔符，请检查输入文件格式。")
+        return
+
+    # 合并章节标题和内容
+    chapters = ["".join(chapters[i:i+2]) for i in range(1, len(chapters), 2)]
+
+    # 保存每一章到单独的文件
+    for i, chapter in enumerate(chapters):
+        # 以章节标题为基础分割
+        chapter_title = chapter.split('\n', 1)[0].strip()  # 获取章节标题
+        sub_chapters = re.split(r'-{3,}', chapter)  # 按连续的“---”分割章节内容
+
+        # 保存分割后的子章节
+        for j, sub_chapter in enumerate(sub_chapters):
+            output_file = os.path.join(output_subdir, f"chapter_{i+1}{j+1}.txt")
+            with open(output_file, 'w', encoding='utf-8') as out_file:
+                out_file.write(sub_chapter.strip())
+            print(f"已保存: {output_file}")
+
+# 使用示例
+input_file = "两步版本\原始文件\例文女友故事.txt"  # 替换为你的小说文件路径
+output_dir = "两步版本\过程文件"   # 输出目录
+split_novel_by_chapters(input_file, output_dir)
