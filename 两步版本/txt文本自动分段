@@ -30,6 +30,6 @@ def split_novel_by_chapters(input_file, output_dir):
         print(f"已保存: {output_file}")
 
 # 使用示例
-input_file = "两步版本\原始文件\例文女友故事"  # 替换为你的小说文件路径
-output_dir = "两步版本\过程文件\例文女友故事"   # 输出目录
+input_file = "两步版本\原始文件\女友故事.txt"  # 替换为你的小说文件路径
+output_dir = "两步版本\过程文件\女友故事"   # 输出目录
 split_novel_by_chapters(input_file, output_dir)

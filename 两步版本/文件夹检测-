@@ -34,5 +34,5 @@ def split_txt_files_in_folder(folder_path):
                 print(f"已删除原文件: {file_path}")
 
 # 使用示例
-folder_path = "两步版本\过程文件\例文女友故事"  # 替换为你的文件夹路径
+folder_path = "两步版本\过程文件\女友故事"  # 替换为你的文件夹路径
 split_txt_files_in_folder(folder_path)

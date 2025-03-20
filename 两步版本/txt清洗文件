@@ -1,0 +1,56 @@
+import os
+import re
+
+def clean_invisible_characters(input_file, output_dir):
+    """
+    清洗掉文本文件中的不可见字符，并将清洗后的内容保存到指定目录中。
+    如果一行开头没有空格，则将该行拼接到上一行。
+
+    :param input_file: 输入的文本文件路径
+    :param output_dir: 输出文件保存的目录路径
+    """
+    # 确保输出目录存在
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+
+    try:
+        # 读取文件内容
+        with open(input_file, 'r', encoding='utf-8') as file:
+            lines = file.readlines()
+
+        # 定义正则表达式，保留中文、英文、数字、常见标点符号
+        pattern = r'[^\u4e00-\u9fa5\u0020-\u007e\u3000-\u303f\uff00-\uffef]'
+        # \u4e00-\u9fa5: 中文字符范围
+        # \u0020-\u007e: 基本拉丁字符（包括英文、数字和常见标点）
+        # \u3000-\u303f: 中日韩符号和标点
+        # \uff00-\uffef: 全角字符（包括全角标点和数字）
+
+        cleaned_lines = []
+        for line in lines:
+            # 如果行开头有空格，保留换行符
+            if line.startswith(' '):
+                cleaned_lines.append(re.sub(pattern, '', line))
+            else:
+                # 如果行开头没有空格，拼接到上一行
+                if cleaned_lines:
+                    cleaned_lines[-1] = cleaned_lines[-1].rstrip('\n') + re.sub(pattern, '', line).strip()
+                else:
+                    cleaned_lines.append(re.sub(pattern, '', line).strip())
+
+        # 构造输出文件路径
+        base_name = os.path.basename(input_file)  # 获取输入文件名
+        output_file = os.path.join(output_dir, base_name)  # 输出文件路径
+
+        # 将清洗后的内容写入新文件
+        with open(output_file, 'w', encoding='utf-8') as file:
+            file.write('\n'.join(cleaned_lines))
+
+        print(f"清洗完成！清洗后的文件已保存到: {output_file}")
+
+    except Exception as e:
+        print(f"发生错误: {e}")
+
+# 使用示例
+input_file = "两步版本\\原始文件\\女友故事.txt"  # 输入文件路径
+output_dir = "两步版本\\过程文件\\清洗文件"  # 输出目录路径
+clean_invisible_characters(input_file, output_dir)

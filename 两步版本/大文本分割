@@ -1,0 +1,53 @@
+import os
+
+def split_large_txt_files(folder_path, max_lines=300, split_lines=200, overlap=40):
+    """
+    遍历文件夹内所有txt文件，对超过指定行数的文件进行分割。
+
+    :param folder_path: 文件夹路径
+    :param max_lines: 超过该行数的文件将被分割
+    :param split_lines: 每个子文件保留的行数
+    :param overlap: 子文件之间的重叠行数
+    """
+    # 遍历文件夹中的所有文件
+    for filename in os.listdir(folder_path):
+        if filename.endswith('.txt'):  # 只处理 .txt 文件
+            file_path = os.path.join(folder_path, filename)
+
+            # 读取文件内容
+            with open(file_path, 'r', encoding='utf-8') as file:
+                lines = file.readlines()
+
+            # 如果文件行数超过 max_lines，则进行分割
+            if len(lines) > max_lines:
+                print(f"正在分割文件: {filename}")
+                base_name, ext = os.path.splitext(filename)  # 获取文件名和扩展名
+                start = 0
+                part = 1
+
+                # 按行数分割文件
+                while start < len(lines):
+                    end = start + split_lines
+                    sub_lines = lines[start:end]
+
+                    # 构造子文件名
+                    sub_filename = f"{base_name}_{part}{ext}"
+                    sub_file_path = os.path.join(folder_path, sub_filename)
+
+                    # 写入子文件
+                    with open(sub_file_path, 'w', encoding='utf-8') as sub_file:
+                        sub_file.writelines(sub_lines)
+
+                    print(f"已生成子文件: {sub_filename}")
+                    part += 1
+                    start += split_lines - overlap  # 移动起始行，考虑重叠部分
+
+                # 删除原文件
+                os.remove(file_path)
+                print(f"已删除原文件: {filename}")
+            else:
+                print(f"文件未超过 {max_lines} 行，保留原文件: {filename}")
+
+# 使用示例
+folder_path = "两步版本\过程文件\女友故事"  # 替换为你的文件夹路径
+split_large_txt_files(folder_path)
