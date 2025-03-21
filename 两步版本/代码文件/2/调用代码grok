@@ -1,0 +1,109 @@
+import os
+import json
+import argparse
+from openai import OpenAI
+
+# 调用Grok beta模型API的函数
+def call_grok_api(text, api_key):
+    """
+    调用Grok beta模型API，将小说章节文本转化为分镜提示词。
+    参数:
+        text: 小说章节的文本内容
+        api_key: xAI API密钥
+    返回:
+        API响应内容（字符串）
+    """
+    # 创建OpenAI客户端，设置xAI的基础URL
+    client = OpenAI(base_url="https://api.x.ai/v1", api_key=api_key)
+    
+    # 构建请求
+    response = client.chat.completions.create(
+        model="grok-beta",
+        messages=[
+            {"role": "system", "content": "You are a helpful assistant that converts novel chapters into storyboarding prompts."},
+            {"role": "user", "content": f"Convert the following novel chapter into storyboarding prompts in JSON format:\n\n{text}"}
+        ]
+    )
+    
+    # 返回API响应内容
+    return response.choices[0].message.content
+
+# 读取txt文件内容的函数
+def read_txt_file(file_path):
+    """
+    读取txt文件内容。
+    参数:
+        file_path: txt文件路径
+    返回:
+        文件的文本内容
+    """
+    with open(file_path, 'r', encoding='utf-8') as file:
+        return file.read()
+
+# 获取目录下所有txt文件的函数
+def get_txt_files(directory):
+    """
+    获取指定目录下所有txt文件。
+    参数:
+        directory: 包含txt文件的目录路径
+    返回:
+        txt文件路径列表
+    """
+    return [os.path.join(directory, f) for f in os.listdir(directory) if f.endswith('.txt')]
+
+# 保存输出结果的函数
+def save_output(file_path, content):
+    """
+    保存API响应内容到文件。
+    参数:
+        file_path: 原始txt文件路径
+        content: API响应内容
+    """
+    output_file = file_path.replace('.txt', '_output.json')
+    try:
+        # 尝试将内容解析为JSON
+        json_content = json.loads(content)
+        with open(output_file, 'w', encoding='utf-8') as out_file:
+            json.dump(json_content, out_file, ensure_ascii=False, indent=2)
+    except json.JSONDecodeError:
+        # 如果不是JSON，保存为文本文件
+        output_file = file_path.replace('.txt', '_output.txt')
+        with open(output_file, 'w', encoding='utf-8') as out_file:
+            out_file.write(content)
+    print(f"完成处理: {file_path}，结果已保存至 {output_file}")
+
+# 主函数
+def main(directory, api_key):
+    """
+    主函数，逐个处理txt文件并调用API。
+    参数:
+        directory: txt文件所在目录
+        api_key: xAI API密钥
+    """
+    txt_files = get_txt_files(directory)
+    if not txt_files:
+        print(f"目录 {directory} 中未找到任何txt文件。")
+        return
+
+    for file_path in txt_files:
+        print(f"正在处理: {file_path}...")
+        try:
+            # 读取文件内容
+            text = read_txt_file(file_path)
+            # 调用API进行转化
+            result = call_grok_api(text, api_key)
+            # 保存输出
+            save_output(file_path, result)
+        except Exception as e:
+            print(f"处理 {file_path} 时出错: {e}")
+            continue  # 出错时继续处理下一个文件
+
+# 命令行参数处理
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="将小说章节txt文件转化为分镜提示词")
+    parser.add_argument("directory", help="包含txt文件的目录路径")
+    parser.add_argument("api_key", help="xAI API密钥")
+    args = parser.parse_args()
+
+    # 执行主函数
+    main(args.directory, args.api_key)
