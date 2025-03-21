@@ -64,11 +64,11 @@ if __name__ == "__main__":
     else:
         print(f"文件夹已存在：{work_folder_path}")
 
-    input_file = os.path.join(input_path, f"{name}.txt")
+
     output_dir = work_folder_path
 
-    if not os.path.exists(input_file):
-        print(f"输入文件不存在：{input_file}")
+    if not os.path.exists(work_folder_path):
+        print(f"输入文件不存在：{work_folder_path}")
         sys.exit(1)
 
     if not os.path.exists(work_folder_path):
