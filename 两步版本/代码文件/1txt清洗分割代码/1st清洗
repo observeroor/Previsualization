@@ -1,3 +1,4 @@
+import sys
 import os
 import re
 
@@ -55,7 +56,38 @@ def clean_txt_file(input_file, output_file):
     except Exception as e:
         print(f"发生错误: {e}")
 
-# 使用示例
-input_file = "两步版本\\原始文件\\女友故事.txt"  # 输入文件路径
-output_file = "两步版本\\过程文件\\清洗文件\\女友故事.txt"  # 输出文件路径
+if __name__ == "__main__":
+    # 从命令行参数获取文件名
+    if len(sys.argv) < 2:
+        print("缺少文件名参数")
+        sys.exit(1)
+
+    name = sys.argv[1]
+
+    # 根据文件名生成输入和输出路径
+    base_path = os.path.join(os.getcwd(), "两步版本", "原始文件")  # 输入文件夹路径
+    output_base_path = os.path.join(os.getcwd(), "两步版本", "过程文件")  # 输出文件夹基础路径
+    output_path = os.path.join(output_base_path, name)  # 输出文件夹路径
+
+    clean_folder_path = os.path.join(output_path, "1st清洗")
+    if not os.path.exists(clean_folder_path):
+        os.makedirs(clean_folder_path)
+        print(f"已创建文件夹：{clean_folder_path}")
+    else:
+        print(f"文件夹已存在：{clean_folder_path}")
+
+
+
+    input_file = os.path.join(base_path, f"{name}.txt")
+    output_file = os.path.join(clean_folder_path, f"{name}.txt")
+
+    if not os.path.exists(input_file):
+        print(f"输入文件不存在：{input_file}")
+        sys.exit(1)
+
+    if not os.path.exists(clean_folder_path):
+        os.makedirs(clean_folder_path)
+
+
 clean_txt_file(input_file, output_file)
+print(f"清洗完成，输出文件：{output_file}")
