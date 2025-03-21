@@ -1,11 +1,13 @@
 import sys
 import os
 import re
+import shutil  # 用于复制文件
 
 def split_txt_files_in_folder(folder_path, output_folder):
     """
     遍历文件夹中的所有 .txt 文件，按连续的 "---" 分割内容。
     分割后的文件保存在指定的输出文件夹中，原始文件不删除。
+    未分割的文件也直接复制到输出文件夹中。
 
     :param folder_path: 原始文件所在的文件夹路径
     :param output_folder: 分割后文件的输出文件夹路径
@@ -42,7 +44,10 @@ def split_txt_files_in_folder(folder_path, output_folder):
                     print(f"已保存: {new_file_path}")
 
             else:
-                print(f"文件 {filename} 中未找到连续的 '---'，跳过分割。")
+                # 如果未找到分割标记，将原文件复制到输出文件夹
+                new_file_path = os.path.join(output_folder, filename)
+                shutil.copy(file_path, new_file_path)
+                print(f"未找到分割标记，已复制原文件到: {new_file_path}")
 
 if __name__ == "__main__":
     # 从命令行参数获取文件名
@@ -57,24 +62,12 @@ if __name__ == "__main__":
     input_path = os.path.join(base_path, "2rd分段")  # 输入文件夹路径
     output_path = os.path.join(base_path, "3th间隔检测")  # 输出文件夹基础路径
 
-    work_folder_path = os.path.join(base_path, "3th间隔检测")
-    if not os.path.exists(work_folder_path):
-        os.makedirs(work_folder_path)
-        print(f"已创建文件夹：{work_folder_path}")
+    # 确保输出文件夹存在
+    if not os.path.exists(output_path):
+        os.makedirs(output_path)
+        print(f"已创建文件夹：{output_path}")
     else:
-        print(f"文件夹已存在：{work_folder_path}")
+        print(f"文件夹已存在：{output_path}")
 
-
-    output_dir = work_folder_path
-
-    if not os.path.exists(work_folder_path):
-        print(f"输入文件不存在：{work_folder_path}")
-        sys.exit(1)
-
-    if not os.path.exists(work_folder_path):
-        os.makedirs(work_folder_path)
-
-# 使用示例
-folder_path = input_path
-output_folder = work_folder_path
-split_txt_files_in_folder(folder_path, output_folder)
+    # 调用分割函数
+    split_txt_files_in_folder(input_path, output_path)

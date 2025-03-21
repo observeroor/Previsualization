@@ -1,10 +1,12 @@
 import sys
 import os
 import re
+import shutil  # 用于复制文件
 
 def split_large_txt_files(folder_path, output_folder, max_lines=300, split_lines=200, overlap=40):
     """
     遍历文件夹内所有txt文件，对超过指定行数的文件进行分割。
+    未分割的文件也直接复制到输出文件夹中。
 
     :param folder_path: 原始文件夹路径
     :param output_folder: 分割后文件的输出文件夹路径
@@ -50,7 +52,10 @@ def split_large_txt_files(folder_path, output_folder, max_lines=300, split_lines
                     start += split_lines - overlap  # 移动起始行，考虑重叠部分
 
             else:
-                print(f"文件未超过 {max_lines} 行，保留原文件: {filename}")
+                # 如果文件未超过 max_lines，将原文件复制到输出文件夹
+                new_file_path = os.path.join(output_folder, filename)
+                shutil.copy(file_path, new_file_path)
+                print(f"文件未超过 {max_lines} 行，已复制原文件到: {new_file_path}")
 
 # 使用示例
 
@@ -67,25 +72,12 @@ if __name__ == "__main__":
     input_path = os.path.join(base_path, "3th间隔检测")  # 输入文件夹路径
     output_path = os.path.join(base_path, "4th大文件分割")  # 输出文件夹基础路径
 
-    work_folder_path = os.path.join(base_path, "4th大文件分割")
-    if not os.path.exists(work_folder_path):
-        os.makedirs(work_folder_path)
-        print(f"已创建文件夹：{work_folder_path}")
+    # 确保输出文件夹存在
+    if not os.path.exists(output_path):
+        os.makedirs(output_path)
+        print(f"已创建文件夹：{output_path}")
     else:
-        print(f"文件夹已存在：{work_folder_path}")
+        print(f"文件夹已存在：{output_path}")
 
-    output_dir = work_folder_path
-
-    if not os.path.exists(work_folder_path):
-        print(f"输入文件不存在：{work_folder_path}")
-        sys.exit(1)
-
-    if not os.path.exists(work_folder_path):
-        os.makedirs(work_folder_path)
-
-# 使用示例
-folder_path = input_path
-output_folder = work_folder_path
-
-
-split_large_txt_files(folder_path, output_folder)
+    # 调用分割函数
+    split_large_txt_files(input_path, output_path)

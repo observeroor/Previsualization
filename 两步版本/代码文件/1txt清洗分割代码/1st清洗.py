@@ -5,7 +5,7 @@ import re
 def clean_txt_file(input_file, output_file):
     """
     对txt文件进行清洗：
-    1. 删除没有字母、数字、中文字符的行。
+    1. 删除没有字母、数字、中文字符或 "-" 符号的行。
     2. 只保留中文、英文、数字、常见标点符号、换行符和空格，删除其他所有字符。
     3. 删除错误换行：如果一行换行后，下一行首个字符是中文、字母或数字，则拼接到上一行。
     4. 删除每一行开头的连续空格。
@@ -16,7 +16,7 @@ def clean_txt_file(input_file, output_file):
     """
     try:
         # 定义正则表达式
-        valid_line_pattern = r'[a-zA-Z0-9\u4e00-\u9fa5]'  # 匹配包含字母、数字、中文的行
+        valid_line_pattern = r'[a-zA-Z0-9\u4e00-\u9fa5-]'  # 匹配包含字母、数字、中文或 "-" 的行
         valid_char_pattern = r'[^\u4e00-\u9fa5a-zA-Z0-9\u0020-\u007e\u3000-\u303f\uff00-\uffef\n]'  # 保留有效字符
 
         with open(input_file, 'r', encoding='utf-8') as file:
@@ -24,7 +24,7 @@ def clean_txt_file(input_file, output_file):
 
         cleaned_lines = []
         for line in lines:
-            # 删除没有字母、数字、中文字符的行
+            # 删除没有字母、数字、中文字符或 "-" 的行
             if not re.search(valid_line_pattern, line):
                 continue
 
@@ -76,8 +76,6 @@ if __name__ == "__main__":
     else:
         print(f"文件夹已存在：{clean_folder_path}")
 
-
-
     input_file = os.path.join(base_path, f"{name}.txt")
     output_file = os.path.join(clean_folder_path, f"{name}.txt")
 
@@ -88,6 +86,5 @@ if __name__ == "__main__":
     if not os.path.exists(clean_folder_path):
         os.makedirs(clean_folder_path)
 
-
-clean_txt_file(input_file, output_file)
-print(f"清洗完成，输出文件：{output_file}")
+    clean_txt_file(input_file, output_file)
+    print(f"清洗完成，输出文件：{output_file}")
