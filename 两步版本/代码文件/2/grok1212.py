@@ -1,4 +1,5 @@
 import os
+import sys  
 import json
 import argparse
 from openai import OpenAI
@@ -65,7 +66,7 @@ def save_output(output_dir, original_file, content):
     print(f"完成处理: {original_file}，结果已保存至 {output_file}")
 
 # 主函数
-def main(directory, api_key, output_dir, temperature, max_tokens):
+def main(directory, api_key, output_dir):
     """主函数，逐个处理txt文件并调用API"""
     txt_files = get_txt_files(directory)
     if not txt_files:
@@ -88,7 +89,6 @@ if __name__ == "__main__":
     parser.add_argument("directory", help="包含txt文件的目录路径")
     parser.add_argument("api_key", help="xAI API密钥")
     parser.add_argument("output_dir", help="输出文件保存目录")
-    parser.add_argument("--temperature", type=float, default=0.7, help="模型温度（默认0.7）")
     args = parser.parse_args()
 
-    main(args.directory, args.api_key, args.output_dir, args.temperature)
+    main(args.directory, args.api_key, args.output_dir)
