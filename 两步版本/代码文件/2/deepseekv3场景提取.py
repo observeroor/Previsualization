@@ -5,7 +5,7 @@ import argparse
 from openai import OpenAI
 
 # 调用API的函数
-def call_grok_api(text, api_key):
+def call_deepseekv3(text):
     """
     调用Grok beta模型API,将小说章节文本转化为分镜提示词。
     参数:
@@ -16,7 +16,7 @@ def call_grok_api(text, api_key):
     返回:
         API响应内容(字符串)
     """
-    client = OpenAI(base_url="https://api.x.ai/v1", api_key=api_key)
+    client = OpenAI(base_url="https://ark.cn-beijing.volces.com/api/v3/", api_key="https://ark.cn-beijing.volces.com/api/v3/")
     
     response = client.chat.completions.create(
         model="grok-2-1212",
@@ -66,7 +66,7 @@ def save_output(output_dir, original_file, content):
     print(f"完成处理: {original_file},结果已保存至 {output_file}")
 
 # 主函数
-def main(directory, api_key, output_dir):
+def main(directory, output_dir):
     """主函数,逐个处理txt文件并调用API"""
     txt_files = get_txt_files(directory)
     if not txt_files:
@@ -77,7 +77,7 @@ def main(directory, api_key, output_dir):
         print(f"正在处理: {file_path}...")
         try:
             text = read_txt_file(file_path)
-            result = call_grok_api(text, api_key)
+            result = call_deepseekv3(text)
             save_output(output_dir, file_path, result)
         except Exception as e:
             print(f"处理 {file_path} 时出错: {e}")
@@ -87,8 +87,7 @@ def main(directory, api_key, output_dir):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="将小说章节txt文件转化为分镜提示词")
     parser.add_argument("directory", help="包含txt文件的目录路径")
-    parser.add_argument("api_key", help="xAI API密钥")
     parser.add_argument("output_dir", help="输出文件保存目录")
     args = parser.parse_args()
 
-    main(args.directory, args.api_key, args.output_dir)
+    main(args.directory,  args.output_dir)
