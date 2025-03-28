@@ -77,7 +77,7 @@ def main(directory, api_key, output_dir):
         print(f"正在处理: {file_path}...")
         try:
             text = read_txt_file(file_path)
-            result = call_grok_api(text, api_key, temperature, max_tokens)
+            result = call_grok_api(text, api_key)
             save_output(output_dir, file_path, result)
         except Exception as e:
             print(f"处理 {file_path} 时出错: {e}")

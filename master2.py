@@ -9,7 +9,6 @@ def main():
     param1 = r"两步版本\过程文件\nygs\4th大文件分割"  
     param2 = "xai-JtSPb3Wz6e9FJ1J5pDh3OoMeOvK7aGntYVPF4MlD7YXeTUDgmCg9WP6Y5fPqK00LMsJzbuamd7R2jVWI"  
     param3 = r"两步版本\过程文件\nygs\output"  
-    param4 = "0"
     """
     param1 directory
     param2 api_key

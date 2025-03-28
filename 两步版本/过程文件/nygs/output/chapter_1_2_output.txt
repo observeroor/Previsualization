@@ -1,0 +1,108 @@
+```json
+[
+  {
+    "scene": 1,
+    "description": "The girlfriend, usually cheerful, hesitantly tells the protagonist about her plans for the evening.",
+    "characters": ["Protagonist", "Girlfriend"],
+    "location": "Phone call",
+    "action": "The girlfriend informs the protagonist that she is hosting a dinner at her place with classmates, including her ex-boyfriend, Shang Zhiyong.",
+    "dialogue": [
+      {"speaker": "Girlfriend", "line": "You can't get angry, okay? Big pervert."},
+      {"speaker": "Protagonist", "line": "Okay, I won't."}
+    ]
+  },
+  {
+    "scene": 2,
+    "description": "The protagonist reacts with unease upon hearing about the ex-boyfriend's presence.",
+    "characters": ["Protagonist"],
+    "location": "Protagonist's location",
+    "action": "The protagonist feels uneasy and conflicted about his girlfriend meeting her ex, but tries to trust her.",
+    "dialogue": [
+      {"speaker": "Protagonist", "line": "What?"}
+    ]
+  },
+  {
+    "scene": 3,
+    "description": "The girlfriend asks if her friends can come over for dinner.",
+    "characters": ["Protagonist", "Girlfriend"],
+    "location": "Phone call",
+    "action": "The girlfriend asks for permission to host her friends, and the protagonist reluctantly agrees.",
+    "dialogue": [
+      {"speaker": "Girlfriend", "line": "Can they come over to my place tonight?"},
+      {"speaker": "Protagonist", "line": "Yes, they can."},
+      {"speaker": "Girlfriend", "line": "Thanks, big pervert, you're such a broad-minded big pervert~"}
+    ]
+  },
+  {
+    "scene": 4,
+    "description": "The protagonist feels disappointed about not being able to see his girlfriend that night.",
+    "characters": ["Protagonist", "Girlfriend"],
+    "location": "Phone call",
+    "action": "The protagonist expresses his disappointment about not seeing his girlfriend, and they agree to meet the next day.",
+    "dialogue": [
+      {"speaker": "Protagonist", "line": "So, I can't see you tonight?"},
+      {"speaker": "Girlfriend", "line": "It would be awkward for you to meet them. Let's meet tomorrow."},
+      {"speaker": "Protagonist", "line": "Alright, don't stay up too late."}
+    ]
+  },
+  {
+    "scene": 5,
+    "description": "The protagonist drives to his girlfriend's house out of concern and curiosity.",
+    "characters": ["Protagonist"],
+    "location": "Car, Girlfriend's house",
+    "action": "The protagonist drives to his girlfriend's house, feeling uneasy and unsure of what he might find.",
+    "dialogue": []
+  },
+  {
+    "scene": 6,
+    "description": "The protagonist sneaks into his girlfriend's house using a spare key.",
+    "characters": ["Protagonist"],
+    "location": "Girlfriend's house",
+    "action": "The protagonist uses a spare key to enter the house and quietly searches for his girlfriend and her guests.",
+    "dialogue": []
+  },
+  {
+    "scene": 7,
+    "description": "The protagonist discovers his girlfriend and her ex-boyfriend in an intimate situation.",
+    "characters": ["Protagonist", "Girlfriend", "Shang Zhiyong"],
+    "location": "Girlfriend's house, upstairs",
+    "action": "The protagonist sees his girlfriend and Shang Zhiyong in a compromising position, leading to feelings of jealousy and anger.",
+    "dialogue": [
+      {"speaker": "Girlfriend", "line": "Stop it, it hurts."},
+      {"speaker": "Shang Zhiyong", "line": "It's been months since I last had you, your pussy has gotten tighter. I love it."}
+    ]
+  },
+  {
+    "scene": 8,
+    "description": "The protagonist watches the intimate encounter, feeling a mix of emotions.",
+    "characters": ["Protagonist", "Girlfriend", "Shang Zhiyong"],
+    "location": "Girlfriend's house, upstairs",
+    "action": "The protagonist continues to watch, feeling both jealous and aroused by the scene unfolding before him.",
+    "dialogue": [
+      {"speaker": "Girlfriend", "line": "You're such a bad guy, how can I face people like this?"},
+      {"speaker": "Shang Zhiyong", "line": "It's not like anyone's here. It's hot inside, it's better out here where I can fuck you properly."}
+    ]
+  },
+  {
+    "scene": 9,
+    "description": "The protagonist hides as Shang Zhiyong and the girlfriend move to another room.",
+    "characters": ["Protagonist", "Girlfriend", "Shang Zhiyong"],
+    "location": "Jan's room",
+    "action": "The protagonist hides under a desk as Shang Zhiyong and the girlfriend enter the room, continuing their intimate encounter.",
+    "dialogue": [
+      {"speaker": "Girlfriend", "line": "That's Jan's room, what are you doing?"},
+      {"speaker": "Shang Zhiyong", "line": "It used to be my room, I want to relive the feeling."}
+    ]
+  },
+  {
+    "scene": 10,
+    "description": "The protagonist witnesses the intimate encounter from his hiding spot.",
+    "characters": ["Protagonist", "Girlfriend", "Shang Zhiyong"],
+    "location": "Jan's room",
+    "action": "The protagonist watches as Shang Zhiyong and the girlfriend engage in various sexual acts, feeling a mix of anger, jealousy, and arousal.",
+    "dialogue": [
+      {"speaker": "Shang Zhiyong", "line": "Now, it's your turn to make me cum, just like before."}
+    ]
+  }
+]
+```
