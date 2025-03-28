@@ -1,108 +1,88 @@
 ```json
 [
   {
-    "scene": 1,
-    "description": "The girlfriend, usually cheerful, hesitantly tells the protagonist about her plans for the evening.",
-    "characters": ["Protagonist", "Girlfriend"],
-    "location": "Phone call",
-    "action": "The girlfriend informs the protagonist that she is hosting a dinner at her place with classmates, including her ex-boyfriend, Shang Zhiyong.",
-    "dialogue": [
-      {"speaker": "Girlfriend", "line": "You can't get angry, okay? Big pervert."},
-      {"speaker": "Protagonist", "line": "Okay, I won't."}
-    ]
+    "scene_number": 1,
+    "prompt": {
+      "details": {
+        "foreground": {
+          "number_and_positions": "One male (尚志勇), one female (小慧), male standing in the center of the living room, female being carried in his arms.",
+          "clothing": "Both characters are completely naked. Male: No clothing. Female: No clothing, her body is suspended in the air, held by the male.",
+          "appearance": "Female: Long, black, wavy hair, slender waist, full buttocks resembling a white peach, smooth and fair skin. Male: Tall (1.9 meters), skinny, dark skin, hairy legs.",
+          "posture_and_interaction": "Female: Suspended in the air, legs wrapped around the male's waist, arms around his neck. Male: Holding female, arms under her thighs, one hand gripping her waist, the other on her buttocks, fingers digging into the soft flesh.",
+          "expression": "Female: A mix of pain and pleasure, biting her lower lip. Male: A leering, mischievous smile.",
+          "sexual_features": "Female: Full, white breasts bouncing, buttocks exposed and slightly red from being gripped, vagina wet and visibly stretched around the male's penis. Male: Large, erect penis deeply inserted into the female's vagina, hairy testicles visible."
+        },
+        "midground": "A wooden table in the center of the living room, a sofa to the side, and a staircase leading upstairs.",
+        "background": "A brightly lit living room with an open window, suggesting a warm, humid evening, with a sense of exposure and vulnerability."
+      },
+      "camera_settings": {
+        "focal_length": "50mm standard lens",
+        "aperture": "f/2.8 to capture the details of the characters while maintaining a shallow depth of field to blur the background."
+      }
+    }
   },
   {
-    "scene": 2,
-    "description": "The protagonist reacts with unease upon hearing about the ex-boyfriend's presence.",
-    "characters": ["Protagonist"],
-    "location": "Protagonist's location",
-    "action": "The protagonist feels uneasy and conflicted about his girlfriend meeting her ex, but tries to trust her.",
-    "dialogue": [
-      {"speaker": "Protagonist", "line": "What?"}
-    ]
+    "scene_number": 2,
+    "prompt": {
+      "details": {
+        "foreground": {
+          "number_and_positions": "One male (尚志勇), one female (小慧), male standing, female still being carried but now more actively engaged.",
+          "clothing": "Both characters remain completely naked. Male: No clothing. Female: No clothing, her body still suspended, legs wrapped around the male.",
+          "appearance": "Female: Long, black, wavy hair, slender waist, full buttocks, smooth and fair skin. Male: Tall, skinny, dark skin, hairy legs.",
+          "posture_and_interaction": "Female: Legs tightly wrapped around the male's waist, arms around his neck, body suspended in the air. Male: Standing with legs wide apart, thrusting vigorously, one hand gripping the female's thigh, the other on her buttocks.",
+          "expression": "Female: A mix of pain and pleasure, eyes half-closed, mouth open in a moan. Male: Grinning lecherously, focused on the act.",
+          "sexual_features": "Female: Breasts bouncing with each thrust, buttocks slightly red, vagina visibly stretched and wet. Male: Large, erect penis thrusting into the female's vagina, testicles swinging with movement."
+        },
+        "midground": "The wooden table and sofa remain in view, with the sofa slightly wet from the action.",
+        "background": "The living room remains brightly lit, the open window still suggesting a warm, humid evening with a sense of exposure."
+      },
+      "camera_settings": {
+        "focal_length": "85mm telephoto lens",
+        "aperture": "f/1.8 to focus closely on the intimate details of the characters while blurring the background."
+      }
+    }
   },
   {
-    "scene": 3,
-    "description": "The girlfriend asks if her friends can come over for dinner.",
-    "characters": ["Protagonist", "Girlfriend"],
-    "location": "Phone call",
-    "action": "The girlfriend asks for permission to host her friends, and the protagonist reluctantly agrees.",
-    "dialogue": [
-      {"speaker": "Girlfriend", "line": "Can they come over to my place tonight?"},
-      {"speaker": "Protagonist", "line": "Yes, they can."},
-      {"speaker": "Girlfriend", "line": "Thanks, big pervert, you're such a broad-minded big pervert~"}
-    ]
+    "scene_number": 3,
+    "prompt": {
+      "details": {
+        "foreground": {
+          "number_and_positions": "One male (尚志勇), one female (小慧), male standing, female now lying on the wooden table.",
+          "clothing": "Both characters remain completely naked. Male: No clothing. Female: No clothing, lying on the table, legs spread.",
+          "appearance": "Female: Long, black, wavy hair spread out on the table, slender waist, full buttocks, smooth and fair skin. Male: Tall, skinny, dark skin, hairy legs.",
+          "posture_and_interaction": "Female: Lying on her back on the table, legs spread wide, arms reaching out. Male: Standing between her legs, leaning over her, one hand on her thigh, the other on her waist.",
+          "expression": "Female: Eyes closed, mouth open in a moan, a mix of pleasure and pain. Male: Smirking, focused on the act.",
+          "sexual_features": "Female: Breasts exposed and heaving, buttocks slightly red, vagina wet and gaping slightly from recent penetration. Male: Large, erect penis positioned at the entrance of the female's vagina, ready to thrust."
+        },
+        "midground": "The sofa and the rest of the living room furniture are visible, with the sofa showing signs of wetness.",
+        "background": "The living room is still brightly lit, the open window indicating a warm, humid evening, maintaining the sense of exposure."
+      },
+      "camera_settings": {
+        "focal_length": "50mm standard lens",
+        "aperture": "f/2.8 to capture the details of the characters while maintaining a shallow depth of field."
+      }
+    }
   },
   {
-    "scene": 4,
-    "description": "The protagonist feels disappointed about not being able to see his girlfriend that night.",
-    "characters": ["Protagonist", "Girlfriend"],
-    "location": "Phone call",
-    "action": "The protagonist expresses his disappointment about not seeing his girlfriend, and they agree to meet the next day.",
-    "dialogue": [
-      {"speaker": "Protagonist", "line": "So, I can't see you tonight?"},
-      {"speaker": "Girlfriend", "line": "It would be awkward for you to meet them. Let's meet tomorrow."},
-      {"speaker": "Protagonist", "line": "Alright, don't stay up too late."}
-    ]
-  },
-  {
-    "scene": 5,
-    "description": "The protagonist drives to his girlfriend's house out of concern and curiosity.",
-    "characters": ["Protagonist"],
-    "location": "Car, Girlfriend's house",
-    "action": "The protagonist drives to his girlfriend's house, feeling uneasy and unsure of what he might find.",
-    "dialogue": []
-  },
-  {
-    "scene": 6,
-    "description": "The protagonist sneaks into his girlfriend's house using a spare key.",
-    "characters": ["Protagonist"],
-    "location": "Girlfriend's house",
-    "action": "The protagonist uses a spare key to enter the house and quietly searches for his girlfriend and her guests.",
-    "dialogue": []
-  },
-  {
-    "scene": 7,
-    "description": "The protagonist discovers his girlfriend and her ex-boyfriend in an intimate situation.",
-    "characters": ["Protagonist", "Girlfriend", "Shang Zhiyong"],
-    "location": "Girlfriend's house, upstairs",
-    "action": "The protagonist sees his girlfriend and Shang Zhiyong in a compromising position, leading to feelings of jealousy and anger.",
-    "dialogue": [
-      {"speaker": "Girlfriend", "line": "Stop it, it hurts."},
-      {"speaker": "Shang Zhiyong", "line": "It's been months since I last had you, your pussy has gotten tighter. I love it."}
-    ]
-  },
-  {
-    "scene": 8,
-    "description": "The protagonist watches the intimate encounter, feeling a mix of emotions.",
-    "characters": ["Protagonist", "Girlfriend", "Shang Zhiyong"],
-    "location": "Girlfriend's house, upstairs",
-    "action": "The protagonist continues to watch, feeling both jealous and aroused by the scene unfolding before him.",
-    "dialogue": [
-      {"speaker": "Girlfriend", "line": "You're such a bad guy, how can I face people like this?"},
-      {"speaker": "Shang Zhiyong", "line": "It's not like anyone's here. It's hot inside, it's better out here where I can fuck you properly."}
-    ]
-  },
-  {
-    "scene": 9,
-    "description": "The protagonist hides as Shang Zhiyong and the girlfriend move to another room.",
-    "characters": ["Protagonist", "Girlfriend", "Shang Zhiyong"],
-    "location": "Jan's room",
-    "action": "The protagonist hides under a desk as Shang Zhiyong and the girlfriend enter the room, continuing their intimate encounter.",
-    "dialogue": [
-      {"speaker": "Girlfriend", "line": "That's Jan's room, what are you doing?"},
-      {"speaker": "Shang Zhiyong", "line": "It used to be my room, I want to relive the feeling."}
-    ]
-  },
-  {
-    "scene": 10,
-    "description": "The protagonist witnesses the intimate encounter from his hiding spot.",
-    "characters": ["Protagonist", "Girlfriend", "Shang Zhiyong"],
-    "location": "Jan's room",
-    "action": "The protagonist watches as Shang Zhiyong and the girlfriend engage in various sexual acts, feeling a mix of anger, jealousy, and arousal.",
-    "dialogue": [
-      {"speaker": "Shang Zhiyong", "line": "Now, it's your turn to make me cum, just like before."}
-    ]
+    "scene_number": 4,
+    "prompt": {
+      "details": {
+        "foreground": {
+          "number_and_positions": "One male (尚志勇), one female (小慧), male now sitting on the sofa, female straddling him.",
+          "clothing": "Both characters remain completely naked. Male: No clothing. Female: No clothing, now straddling the male on the sofa.",
+          "appearance": "Female: Long, black, wavy hair, slender waist, full buttocks, smooth and fair skin. Male: Tall, skinny, dark skin, hairy legs.",
+          "posture_and_interaction": "Female: Straddling the male, legs wrapped around his waist, arms around his neck, body moving up and down. Male: Sitting on the sofa, hands gripping the female's waist, guiding her movements.",
+          "expression": "Female: Eyes closed, mouth open in a moan, a mix of pleasure and pain. Male: Smirking, enjoying the act.",
+          "sexual_features": "Female: Breasts bouncing with each movement, buttocks slightly red, vagina wet and visibly stretched around the male's penis. Male: Large, erect penis deeply inserted into the female's vagina, testicles visible."
+        },
+        "midground": "The wooden table and the rest of the living room furniture are visible, with the sofa showing signs of wetness.",
+        "background": "The living room remains brightly lit, the open window still suggesting a warm, humid evening with a sense of exposure."
+      },
+      "camera_settings": {
+        "focal_length": "85mm telephoto lens",
+        "aperture": "f/1.8 to focus closely on the intimate details of the characters while blurring the background."
+      }
+    }
   }
 ]
 ```

@@ -1,238 +1,88 @@
-Here are the storyboarding prompts for the given novel chapter, presented in JSON format:
-
 ```json
 [
-    {
-        "scene_number": 1,
-        "scene_description": "The girlfriend, 小慧, is practicing ballet in a dance studio. She asks for feedback on her performance.",
-        "characters": ["小慧", "周可反"],
-        "location": "Dance studio",
-        "key_actions": [
-            "小慧 finishing her ballet routine",
-            "小慧 asking for feedback",
-            "周可反 complimenting her performance"
-        ],
-        "key_dialogue": [
-            "小慧: 怎么样？我跳得好不好看？",
-            "周可反: 不错呀"
-        ],
-        "visual_elements": [
-            "小慧 in a white leotard and pink camisole",
-            "Sweat on 小慧's face",
-            "Mirrored walls of the dance studio"
-        ]
-    },
-    {
-        "scene_number": 2,
-        "scene_description": "周可反 admires 小慧's physique and becomes distracted by her appearance during her dance.",
-        "characters": ["小慧", "周可反"],
-        "location": "Dance studio",
-        "key_actions": [
-            "周可反 admiring 小慧's legs, waist, and chest",
-            "周可反 feeling aroused"
-        ],
-        "key_dialogue": [],
-        "visual_elements": [
-            "Close-up of 小慧's legs in tight leggings",
-            "Small beads of sweat on 小慧's chest"
-        ]
-    },
-    {
-        "scene_number": 3,
-        "scene_description": "小慧 teases 周可反 about his response to her dancing.",
-        "characters": ["小慧", "周可反"],
-        "location": "Dance studio",
-        "key_actions": [
-            "小慧 playfully scolding 周可反",
-            "周可反 adjusting his pants"
-        ],
-        "key_dialogue": [
-            "小慧: 切！什么吗！就是不错而已呀？",
-            "周可反: 我不是说过，不错，就是无论如何都不能错过，太好了的意思么？是不是，宝贝儿？"
-        ],
-        "visual_elements": [
-            "小慧 pouting",
-            "周可反 standing up from the wooden floor"
-        ]
-    },
-    {
-        "scene_number": 4,
-        "scene_description": "周可反 reflects on his life as an international student and his relationship with 小慧.",
-        "characters": ["周可反"],
-        "location": "Dance studio",
-        "key_actions": [
-            "周可反 looking out the window",
-            "周可反 thinking about his life and relationship"
-        ],
-        "key_dialogue": [],
-        "visual_elements": [
-            "Sunlit campus through the window",
-            "Green trees and quiet surroundings"
-        ]
-    },
-    {
-        "scene_number": 5,
-        "scene_description": "周可反 becomes more intimate with 小慧 in the dance studio.",
-        "characters": ["小慧", "周可反"],
-        "location": "Dance studio",
-        "key_actions": [
-            "周可反 hugging and kissing 小慧",
-            "小慧 initially resisting but then softening"
-        ],
-        "key_dialogue": [
-            "周可反: 小慧，你跳的真美，看得我都痴了",
-            "小慧: 嗯！"
-        ],
-        "visual_elements": [
-            "周可反 embracing 小慧",
-            "小慧's face showing surprise and then softening"
-        ]
-    },
-    {
-        "scene_number": 6,
-        "scene_description": "The intimacy escalates, but they are interrupted by the sound of someone approaching.",
-        "characters": ["小慧", "周可反"],
-        "location": "Dance studio",
-        "key_actions": [
-            "周可反 and 小慧 on the floor",
-            "Sound of keys outside",
-            "Rushing to get dressed"
-        ],
-        "key_dialogue": [
-            "小慧: 不要嘛！在这里多不好，会有人来的！",
-            "周可反: 怕什么，这个时候不要说这里，大学中都没有人的"
-        ],
-        "visual_elements": [
-            "Small window on the door",
-            "Rushed clothing adjustments"
-        ]
-    },
-    {
-        "scene_number": 7,
-        "scene_description": "Two other students enter the dance studio, and 小慧 leaves angrily.",
-        "characters": ["小慧", "周可反", "Two female students"],
-        "location": "Dance studio",
-        "key_actions": [
-            "Two female students entering",
-            "小慧 angrily leaving the studio",
-            "周可反 following her out"
-        ],
-        "key_dialogue": [],
-        "visual_elements": [
-            "Two female students in casual attire",
-            "小慧's angry expression"
-        ]
-    },
-    {
-        "scene_number": 8,
-        "scene_description": "小慧 visits 周可反's apartment to cool off from the heat.",
-        "characters": ["小慧", "周可反"],
-        "location": "周可反's apartment",
-        "key_actions": [
-            "小慧 entering the apartment",
-            "小慧 asking for help with books",
-            "周可反 preparing lunch"
-        ],
-        "key_dialogue": [
-            "小慧: 可反？你在么！",
-            "周可反: 恩，小慧，你来的真快呀？"
-        ],
-        "visual_elements": [
-            "Stack of books on the floor",
-            "Hot summer day outside"
-        ]
-    },
-    {
-        "scene_number": 9,
-        "scene_description": "周可反 peeks at 小慧 while she showers and joins her.",
-        "characters": ["小慧", "周可反"],
-        "location": "Bathroom in 周可反's apartment",
-        "key_actions": [
-            "周可反 watching 小慧 through the shower curtain",
-            "周可反 joining 小慧 in the shower",
-            "Intimate moment in the shower"
-        ],
-        "key_dialogue": [
-            "小慧: 喂喂，你又在那里偷看，别打扰我哦～色狼，快去吃饭～",
-            "周可反: 嘿嘿，我就是大色狼"
-        ],
-        "visual_elements": [
-            "Transparent shower curtain",
-            "Water flowing over 小慧's body"
-        ]
-    },
-    {
-        "scene_number": 10,
-        "scene_description": "周可反 and 小慧 have an intimate moment in the bedroom.",
-        "characters": ["小慧", "周可反"],
-        "location": "Bedroom in 周可反's apartment",
-        "key_actions": [
-            "周可反 and 小慧 moving to the bedroom",
-            "Intimate interaction",
-            "周可反's thoughts about 小慧's past relationship"
-        ],
-        "key_dialogue": [
-            "小慧: 色狼～才是中午呢，你也不拉上百叶窗，是一层呀~",
-            "周可反: 没事儿，没人的"
-        ],
-        "visual_elements": [
-            "Uncovered windows",
-            "Intimate scene on the bed"
-        ]
-    },
-    {
-        "scene_number": 11,
-        "scene_description": "小慧 reveals a secret about her past relationship with 尚志勇, causing 周可反 to feel jealous and aroused.",
-        "characters": ["小慧", "周可反"],
-        "location": "Bedroom in 周可反's apartment",
-        "key_actions": [
-            "小慧 mentioning 尚志勇",
-            "周可反 feeling mixed emotions",
-            "Intimate moment interrupted by revelation"
-        ],
-        "key_dialogue": [
-            "小慧: 以前，尚志勇从不弄到嘴里的"
-        ],
-        "visual_elements": [
-            "Close-up of 小慧's face",
-            "周可反's conflicted expression"
-        ]
-    },
-    {
-        "scene_number": 12,
-        "scene_description": "小慧 informs 周可反 that 尚志勇 and other classmates will be visiting her home.",
-        "characters": ["小慧", "周可反"],
-        "location": "Phone call",
-        "key_actions": [
-            "小慧 calling 周可反",
-            "小慧 mentioning 尚志勇's visit",
-            "周可反 feeling uneasy"
-        ],
-        "key_dialogue": [
-            "小慧: 你不可以生气哦？大色狼",
-            "周可反: 恩，可以呀"
-        ],
-        "visual_elements": [
-            "Phone in 周可反's hand",
-            "Worried expression on 周可反's face"
-        ]
-    },
-    {
-        "scene_number": 13,
-        "scene_number": 13,
-        "scene_description": "周可反 decides to visit 小慧's home to check on her.",
-        "characters": ["周可反"],
-        "location": "Car, 小慧's home",
-        "key_actions": [
-            "周可反 driving to 小慧's home",
-            "周可反 using the spare key to enter",
-            "周可反 sneaking into the house"
-        ],
-        "key_dialogue": [],
-        "visual_elements": [
-            "Nighttime cityscape from the car",
-            "Spare key from the flower pot"
-        ]
+  {
+    "scene": 1,
+    "prompt": {
+      "details": {
+        "foreground": {
+          "人数与相对位置": "一个女生，倪慧珍（小慧），站在房间中央。",
+          "服装": "小慧穿着白色紧身裤袜，粉色吊带背心。紧身裤袜包裹着她的双腿，显现出修长的腿部线条。粉色吊带背心是棉质的，轻薄透气，胸前露出小半个饱满的胸部。",
+          "人物外貌": "小慧有一张鸭蛋脸，脸蛋圆润可爱，轮廓分明，带有混血儿的特征。她的皮肤白皙细腻，眼睛明亮，睫毛长而翘。",
+          "姿态和互动": "小慧轻撅着嘴，脸朝向男友，身体直立，腿部并拢，手臂自然下垂。她的脸上挂着汗珠，眼睛闪着光彩。",
+          "神态": "小慧一脸询问的表情，显得有些调皮和撒娇。",
+          "性特征描写": "小慧的胸部饱满，紧身背心下露出小半个乳房，乳沟间有晶莹的汗珠滚动。她的臀部挺翘，腰身纤细。"
+        },
+        "midground": "房间内有木地板，墙边放着一些舞蹈用具和镜子。",
+        "background": "场景设定在舞蹈房内，阳光透过窗户照进来，营造出明亮而温馨的氛围。",
+        "camera_settings": {
+          "focal_length": "50mm 中焦",
+          "aperture": "f/2.8"
+        }
+      }
     }
+  },
+  {
+    "scene": 2,
+    "prompt": {
+      "details": {
+        "foreground": {
+          "人数与相对位置": "一个男生，周可反，站在小慧面前，距离她一步之遥。",
+          "服装": "可反穿着普通的牛仔裤和T恤，T恤是棉质的，颜色为深蓝色，牛仔裤因勃起而有些不适。",
+          "人物外貌": "可反身高一米八三，体型健壮，面容普通。",
+          "姿态和互动": "可反站立在木地板上，整理着裤子，脸朝向小慧，身体略微前倾，手臂在调整裤子。",
+          "神态": "可反的表情有些尴尬和兴奋。",
+          "性特征描写": "可反的下身因勃起而有些不适，但没有具体描写。"
+        },
+        "midground": "房间内有木地板，墙边放着一些舞蹈用具和镜子。",
+        "background": "场景设定在舞蹈房内，阳光透过窗户照进来，营造出明亮而温馨的氛围。",
+        "camera_settings": {
+          "focal_length": "50mm 中焦",
+          "aperture": "f/2.8"
+        }
+      }
+    }
+  },
+  {
+    "scene": 3,
+    "prompt": {
+      "details": {
+        "foreground": {
+          "人数与相对位置": "一个女生，小慧，一个男生，可反，可反站在小慧面前，两人距离很近。",
+          "服装": "小慧穿着白色紧身裤袜，粉色吊带背心。紧身裤袜包裹着她的双腿，显现出修长的腿部线条。粉色吊带背心是棉质的，轻薄透气，胸前露出小半个饱满的胸部。可反穿着普通的牛仔裤和T恤，T恤是棉质的，颜色为深蓝色，牛仔裤因勃起而有些不适。",
+          "人物外貌": "小慧有一张鸭蛋脸，脸蛋圆润可爱，轮廓分明，带有混血儿的特征。她的皮肤白皙细腻，眼睛明亮，睫毛长而翘。可反身高一米八三，体型健壮，面容普通。",
+          "姿态和互动": "可反搂着小慧的腰，小慧在可反怀中有些撒娇地推他。可反的嘴唇贴在小慧的嘴唇上，小慧的身体有些反抗但逐渐变软。",
+          "神态": "小慧的表情从吃惊转为害羞和享受，可反的表情充满欲望和兴奋。",
+          "性特征描写": "小慧的胸部饱满，紧身背心下露出小半个乳房，乳沟间有晶莹的汗珠滚动。她的臀部挺翘，腰身纤细。可反的下身因勃起而有些不适，但没有具体描写。"
+        },
+        "midground": "房间内有木地板，墙边放着一些舞蹈用具和镜子。",
+        "background": "场景设定在舞蹈房内，阳光透过窗户照进来，营造出明亮而温馨的氛围。",
+        "camera_settings": {
+          "focal_length": "85mm 长焦",
+          "aperture": "f/1.8"
+        }
+      }
+    }
+  },
+  {
+    "scene": 4,
+    "prompt": {
+      "details": {
+        "foreground": {
+          "人数与相对位置": "一个女生，小慧，一个男生，可反，可反将小慧压在垫子上，两人距离非常近。",
+          "服装": "小慧穿着白色紧身裤袜，粉色吊带背心。紧身裤袜包裹着她的双腿，显现出修长的腿部线条。粉色吊带背心是棉质的，轻薄透气，胸前露出小半个饱满的胸部。可反穿着普通的牛仔裤和T恤，T恤是棉质的，颜色为深蓝色，牛仔裤因勃起而有些不适。",
+          "人物外貌": "小慧有一张鸭蛋脸，脸蛋圆润可爱，轮廓分明，带有混血儿的特征。她的皮肤白皙细腻，眼睛明亮，睫毛长而翘。可反身高一米八三，体型健壮，面容普通。",
+          "姿态和互动": "可反将小慧压在垫子上，大手压在小慧的胸部上。小慧的手抓着可反的手，脸朝向可反，身体有些紧张和害羞。",
+          "神态": "小慧的表情有些害羞和生气，可反的表情充满欲望和兴奋。",
+          "性特征描写": "小慧的胸部饱满，紧身背心下露出小半个乳房，乳沟间有晶莹的汗珠滚动。她的臀部挺翘，腰身纤细。可反的手感受到小慧胸部的柔软和坚韧。"
+        },
+        "midground": "房间内有木地板，墙边放着一些舞蹈用具和镜子。",
+        "background": "场景设定在舞蹈房内，阳光透过窗户照进来，营造出明亮而温馨的氛围。",
+        "camera_settings": {
+          "focal_length": "85mm 长焦",
+          "aperture": "f/1.8"
+        }
+      }
+    }
+  }
 ]
 ```

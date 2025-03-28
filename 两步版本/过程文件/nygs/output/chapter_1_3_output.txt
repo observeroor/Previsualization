@@ -1,87 +1,61 @@
 ```json
 [
   {
-    "scene": "Sexual Encounter",
-    "description": "尚志勇 and 小慧 are engaged in an intimate and explicit sexual encounter. 尚志勇 uses vulgar language to arouse 小慧 while aggressively thrusting.",
-    "characters": ["尚志勇", "小慧"],
-    "actions": [
-      "尚志勇 aggressively thrusts into 小慧.",
-      "尚志勇 uses explicit language to stimulate 小慧.",
-      "小慧 moans and responds to 尚志勇's actions."
-    ],
-    "setting": "Indoor, possibly a bedroom or living room"
+    "scene": 1,
+    "details": {
+      "foreground": {
+        "人数与相对位置": "1男1女，尚志勇在上方，小慧在下方，尚志勇压在小慧身上。",
+        "服装": "尚志勇：黑色T恤，黑色运动短裤，T恤和短裤都因运动而有些湿透。小慧：白色蕾丝内衣和内裤，内衣被推至胸部下方，内裤被拉至大腿根部，内衣和内裤都有些湿透。",
+        "人物外貌": "小慧：长发散乱，脸颊红润，眼睛半闭，嘴唇微张。",
+        "姿态和互动": "尚志勇：身体前倾，脸朝下，腿部跪在床上，手臂环抱小慧的腰部，双手紧握着小慧的臀部。大鸡巴在小慧体内抽插。小慧：身体后仰，脸朝上，腿部张开，手臂无力地放在身侧，尚志勇的阴囊和睾丸拍打在小慧的屁股上。",
+        "神态": "小慧：在快感中堕落，表情迷离，嘴角挂着满足的微笑。",
+        "性特征描写": "小慧：胸部丰满，乳头因兴奋而挺立，乳房因被推至胸部下方而完全暴露。屁股雪白，阴部湿润，阴唇因抽插而红肿。"
+      },
+      "midground": "床上的床单有些凌乱，床头柜上放着一个闹钟和一盏台灯。",
+      "background": "房间内光线昏暗，窗帘半拉，透出些许阳光，空气中弥漫着情欲的气息。"
+    },
+    "camera_settings": {
+      "lens": "50mm中焦",
+      "aperture": "f/1.8"
+    }
   },
   {
-    "scene": "Revelation and Internal Conflict",
-    "description": "The narrator discovers 尚志勇's manipulative intentions towards 小慧, causing internal conflict and anger.",
-    "characters": ["Narrator"],
-    "actions": [
-      "Narrator feels anger and considers confronting 尚志勇.",
-      "Narrator decides against immediate confrontation due to potential consequences."
-    ],
-    "setting": "Narrator's perspective, possibly hidden or observing"
+    "scene": 2,
+    "details": {
+      "foreground": {
+        "人数与相对位置": "1男1女，尚志勇在上方，小慧在下方，尚志勇压在小慧身上。",
+        "服装": "尚志勇：黑色T恤，黑色运动短裤，T恤和短裤都因运动而有些湿透。小慧：白色蕾丝内衣和内裤，内衣被推至胸部下方，内裤被拉至大腿根部，内衣和内裤都有些湿透。",
+        "人物外貌": "小慧：长发散乱，脸颊红润，眼睛半闭，嘴唇微张。",
+        "姿态和互动": "尚志勇：身体前倾，脸朝下，腿部跪在床上，手臂环抱小慧的腰部，双手紧握着小慧的臀部。大鸡巴在小慧体内抽插。小慧：身体后仰，脸朝上，腿部张开，手臂无力地放在身侧，尚志勇的阴囊和睾丸拍打在小慧的屁股上。",
+        "神态": "小慧：在快感中堕落，表情迷离，嘴角挂着满足的微笑。",
+        "性特征描写": "小慧：胸部丰满，乳头因兴奋而挺立，乳房因被推至胸部下方而完全暴露。屁股雪白，阴部湿润，阴唇因抽插而红肿。"
+      },
+      "midground": "床上的床单有些凌乱，床头柜上放着一个闹钟和一盏台灯。",
+      "background": "房间内光线昏暗，窗帘半拉，透出些许阳光，空气中弥漫着情欲的气息。"
+    },
+    "camera_settings": {
+      "lens": "50mm中焦",
+      "aperture": "f/1.8"
+    }
   },
   {
-    "scene": "Escalation of Sexual Activity",
-    "description": "尚志勇 and 小慧 continue their sexual activities, with 尚志勇 attempting anal sex, leading to 小慧's resistance and eventual submission.",
-    "characters": ["尚志勇", "小慧"],
-    "actions": [
-      "尚志勇 attempts anal sex with 小慧.",
-      "小慧 resists but is overpowered by 尚志勇.",
-      "尚志勇 mocks 小慧's current boyfriend while continuing the act."
-    ],
-    "setting": "Same indoor location"
-  },
-  {
-    "scene": "Voyeurism and Emotional Turmoil",
-    "description": "The narrator watches the sexual encounter from a hidden spot, experiencing a mix of anger, arousal, and helplessness.",
-    "characters": ["Narrator"],
-    "actions": [
-      "Narrator watches the scene unfold, feeling both aroused and angry.",
-      "Narrator masturbates while watching, conflicted by emotions."
-    ],
-    "setting": "Hidden spot, possibly under a desk"
-  },
-  {
-    "scene": "Intrusion and Movement",
-    "description": "尚志勇 and 小慧 move to a different room, unaware of the narrator's presence, leading to increased tension for the narrator.",
-    "characters": ["尚志勇", "小慧", "Narrator"],
-    "actions": [
-      "尚志勇 and 小慧 move to another room.",
-      "Narrator hides under a desk, fearing discovery."
-    ],
-    "setting": "Different room, possibly a study or office"
-  },
-  {
-    "scene": "Continued Sexual Encounter",
-    "description": "尚志勇 and 小慧 continue their sexual activities in the new room, with 小慧 reluctantly participating.",
-    "characters": ["尚志勇", "小慧"],
-    "actions": [
-      "尚志勇 forces 小慧 to continue the sexual act.",
-      "小慧 reluctantly engages, expressing her desire to end the relationship."
-    ],
-    "setting": "New room, near the desk where the narrator is hiding"
-  },
-  {
-    "scene": "Climax and Departure",
-    "description": "尚志勇 and 小慧 reach climax, and 尚志勇 leaves abruptly after receiving a phone call, leaving 小慧 behind.",
-    "characters": ["尚志勇", "小慧"],
-    "actions": [
-      "尚志勇 and 小慧 reach climax.",
-      "尚志勇 receives a phone call and leaves abruptly."
-    ],
-    "setting": "Same room"
-  },
-  {
-    "scene": "Aftermath and Reconnection",
-    "description": "The narrator leaves the scene and later reconnects with 小慧, engaging in intimate activities while processing the previous night's events.",
-    "characters": ["Narrator", "小慧"],
-    "actions": [
-      "Narrator leaves the scene and masturbates at home.",
-      "小慧 visits the narrator the next day.",
-      "Narrator and 小慧 engage in intimate activities."
-    ],
-    "setting": ["Narrator's home", "Bedroom"]
+    "scene": 3,
+    "details": {
+      "foreground": {
+        "人数与相对位置": "1男1女，尚志勇在上方，小慧在下方，尚志勇压在小慧身上。",
+        "服装": "尚志勇：黑色T恤，黑色运动短裤，T恤和短裤都因运动而有些湿透。小慧：白色蕾丝内衣和内裤，内衣被推至胸部下方，内裤被拉至大腿根部，内衣和内裤都有些湿透。",
+        "人物外貌": "小慧：长发散乱，脸颊红润，眼睛半闭，嘴唇微张。",
+        "姿态和互动": "尚志勇：身体前倾，脸朝下，腿部跪在床上，手臂环抱小慧的腰部，双手紧握着小慧的臀部。大鸡巴在小慧体内抽插。小慧：身体后仰，脸朝上，腿部张开，手臂无力地放在身侧，尚志勇的阴囊和睾丸拍打在小慧的屁股上。",
+        "神态": "小慧：在快感中堕落，表情迷离，嘴角挂着满足的微笑。",
+        "性特征描写": "小慧：胸部丰满，乳头因兴奋而挺立，乳房因被推至胸部下方而完全暴露。屁股雪白，阴部湿润，阴唇因抽插而红肿。"
+      },
+      "midground": "床上的床单有些凌乱，床头柜上放着一个闹钟和一盏台灯。",
+      "background": "房间内光线昏暗，窗帘半拉，透出些许阳光，空气中弥漫着情欲的气息。"
+    },
+    "camera_settings": {
+      "lens": "50mm中焦",
+      "aperture": "f/1.8"
+    }
   }
 ]
 ```
