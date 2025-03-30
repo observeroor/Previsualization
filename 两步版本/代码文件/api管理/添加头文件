@@ -1,0 +1,6 @@
+from api_manager import ApiKeyManager
+
+manager = ApiKeyManager("api_keys.json")
+api_info = manager.get_api_key("api1")
+url = api_info["url"]
+key = api_info["key"]
