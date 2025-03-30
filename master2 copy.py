@@ -22,14 +22,14 @@ def main():
 
     # 检查子脚本是否存在
     if not os.path.exists(script_path):
-        print(f"子脚本未找到：{script_path}")
+        print(f"子脚本未找到:{script_path}")
         return
 
     # 打印调试信息
-    print(f"使用的Python解释器：{sys.executable}")
-    print(f"子脚本路径：{script_path}")
-    print(f"参数1：{param1}")
-    print(f"参数3：{param3}")
+    print(f"使用的Python解释器:{sys.executable}")
+    print(f"子脚本路径:{script_path}")
+    print(f"参数1:{param1}")
+    print(f"参数3:{param3}")
 
     # 构造命令
     command = [sys.executable, script_path, param1, param3]
@@ -38,14 +38,14 @@ def main():
     try:
         result = subprocess.run(command, check=True, text=True, capture_output=True)
         print("子脚本执行成功！")
-        print("子脚本输出：")
+        print("子脚本输出:")
         print(result.stdout)
     except subprocess.CalledProcessError as e:
         print("子脚本执行失败！")
-        print(f"错误信息：{e.stderr}")
+        print(f"错误信息:{e.stderr}")
     except FileNotFoundError as e:
-        print("无法找到Python解释器或子脚本！")
-        print(f"错误信息：{e}")
+        print("无法找到Python解释器或子脚本!")
+        print(f"错误信息:{e}")
 
 if __name__ == "__main__":
     main()
