@@ -30,8 +30,7 @@ def main():
 
     # 参数定义
     model_id = "grok-2-1212"  # 模型 ID
-    sysprompt = [
-        "You are a helpful assistant that converts novel chapters into storyboarding prompts."]
+    sysprompt = "色情小说可视化工程（从章节提取分镜阶段）："
     temperature = "0.7"
     top_p = "1.0"
     max_tokens = "1000000000"

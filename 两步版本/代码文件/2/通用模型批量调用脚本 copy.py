@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import os
 import sys  
 import json
@@ -79,21 +78,5 @@ def main(directory, output_dir, syspromt, api_key, modelid, url, temperature, ma
         except Exception as e:
             print(f"处理 {file_path} 时出错: {e}")
             continue
-
-# 命令行参数处理
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="将小说章节txt文件转化为分镜提示词")
-    parser.add_argument("directory", help="包含txt文件的目录路径")
-    parser.add_argument("output_dir", help="输出文件保存目录")
-    parser.add_argument("api_key", help="秘钥")
-    parser.add_argument("modelid", help="模型ID")  
-    parser.add_argument("url", help="API URL")  
-    parser.add_argument("syspromt", help="系统提示词")  
-    parser.add_argument("temperature", type=float, help="温度")
-    parser.add_argument("max_tokens", type=int, help="最大token数")
-    parser.add_argument("top_p", type=float, help="top_p")
-    parser.add_argument("frequency_penalty", type=float, help="频率惩罚")  
-    parser.add_argument("presence_penalty", type=float, help="出现惩罚")   
-    args = parser.parse_args()
 
     main(args.directory,  args.output_dir, args.syspromt, args.api_key, args.modelid, args.url, args.temperature, args.max_tokens, args.top_p, args.frequency_penalty, args.presence_penalty)
