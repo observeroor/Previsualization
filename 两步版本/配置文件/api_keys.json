@@ -1,0 +1,10 @@
+{
+    "grok-2-1212": {
+        "api_key": "your_api_key_here",
+        "url": "https://api.grok.com/v1/storyboard"
+    },
+    "another-model-id": {
+        "api_key": "another_api_key_here",
+        "url": "https://api.another.com/v1"
+    }
+}
