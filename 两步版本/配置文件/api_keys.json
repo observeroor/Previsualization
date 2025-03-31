@@ -1,10 +1,18 @@
 {
     "grok-2-1212": {
-        "api_key": "your_api_key_here",
-        "url": "https://api.grok.com/v1/storyboard"
+        "api_key": "xai-JtSPb3Wz6e9FJ1J5pDh3OoMeOvK7aGntYVPF4MlD7YXeTUDgmCg9WP6Y5fPqK00LMsJzbuamd7R2jVWI",
+        "url": "https://api.x.ai"
     },
-    "another-model-id": {
-        "api_key": "another_api_key_here",
-        "url": "https://api.another.com/v1"
+    "deepseek-r1-250120": {
+        "api_key": "09d01e0f-0a98-44d6-93c6-5088b4307f82",
+        "url": "https://ark.cn-beijing.volces.com/api/v3/"
+    },
+    "deepseek-v3-250324": {
+        "api_key": "09d01e0f-0a98-44d6-93c6-5088b4307f82",
+        "url": "https://ark.cn-beijing.volces.com/api/v3/"
+    },
+    "doubao-1-5-pro-256k-250115": {
+        "api_key": "09d01e0f-0a98-44d6-93c6-5088b4307f82",
+        "url": "https://ark.cn-beijing.volces.com/api/v3/"
     }
 }
