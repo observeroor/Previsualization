@@ -3,7 +3,7 @@ import subprocess
 
 def main():
     # 设置子脚本的路径（可以自由修改）
-    scripts_path = r"两步版本\代码文件\1txt清洗分割代码"
+    scripts_path = r"代码文件\1txt清洗分割代码"
 
     # 提示用户输入指令
     user_input = input("请输入指令（格式：split name）：").strip()
@@ -19,7 +19,7 @@ def main():
         return
 
     # 固定路径
-    base_path = r"两步版本\过程文件"
+    base_path = r"过程文件"
     folder_path = os.path.join(base_path, name)
     if not os.path.exists(folder_path):
         os.makedirs(folder_path)

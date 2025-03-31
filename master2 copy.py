@@ -4,10 +4,10 @@ import sys
 
 def main():
     # 子脚本路径（请根据实际路径修改）
-    script_path = os.path.join("两步版本", "代码文件", "2", "deepseekv3场景提取.py")
+    script_path = os.path.join( "代码文件", "2", "deepseekv3场景提取.py")
     # 定义参数
-    param1 = os.path.join("两步版本", "过程文件", "nygs", "4th大文件分割")
-    param3 = os.path.join("两步版本", "过程文件", "nygs", "output")
+    param1 = os.path.join( "过程文件", "nygs", "4th大文件分割")
+    param3 = os.path.join( "过程文件", "nygs", "output")
     """
     param1 directory
     param2 api_key
