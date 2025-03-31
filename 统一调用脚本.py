@@ -30,7 +30,8 @@ def main():
 
     # 参数定义
     model_id = "grok-2-1212"  # 模型 ID
-    sysprompt = "You are a helpful assistant that converts novel chapters into storyboarding prompts."
+    sysprompt = [
+        "You are a helpful assistant that converts novel chapters into storyboarding prompts."]
     temperature = "0.7"
     top_p = "1.0"
     max_tokens = "1000000000"
