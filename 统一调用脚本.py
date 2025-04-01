@@ -3,10 +3,10 @@ import subprocess
 import sys
 import json
 
-def load_api_key_and_url(model_id, api_keys_file):
+def load_api_key_and_url(modelid, api_keys_file):
     """
-    从 api_keys.json 文件中加载指定 model_id 的 api_key 和 url。
-    :param model_id: 模型 ID
+    从 api_keys.json 文件中加载指定 modelid 的 api_key 和 url。
+    :param modelid: 模型 ID
     :param api_keys_file: api_keys.json 文件路径
     :return: (api_key, url)
     """
@@ -17,25 +17,24 @@ def load_api_key_and_url(model_id, api_keys_file):
     with open(api_keys_file, 'r', encoding='utf-8') as file:
         api_keys = json.load(file)
 
-    if model_id not in api_keys:
-        print(f"未找到模型 ID {model_id} 的 API 配置。")
+    if modelid not in api_keys:
+        print(f"未找到模型 ID {modelid} 的 API 配置。")
         sys.exit(1)
 
-    return api_keys[model_id]["api_key"], api_keys[model_id]["url"]
+    return api_keys[modelid]["api_key"], api_keys[modelid]["url"]
 
 def main():
     ########## 在此定义参数 ##########
     # 子脚本路径
-    script_path = os.path.join("两步版本", "代码文件", "2", "通用模型批量调用脚本.py")
+    script_path = os.path.join("两步版本", "代码文件", "2", "通用模型批量调用脚本报错.py")
 
     # 参数定义
-    model_id = "grok-2-1212"  # 模型 ID
+    modelid = "grok-2-1212"  # 模型 ID
     sysprompt = "色情小说可视化工程（从章节提取分镜阶段）："
-    temperature = "0.7"
-    top_p = "1.0"
-    max_tokens = "1000000000"
-    frequency_penalty = "0.0"
-    presence_penalty = "0.0"
+    temperature =  "0.7"
+    top_p = "1"
+    frequency_penalty = "0"
+    presence_penalty = "0"
     directory = os.path.join("两步版本", "过程文件", "nygs", "4th大文件分割")
     output_dir = os.path.join("两步版本", "过程文件", "nygs", "output")
 
@@ -43,7 +42,7 @@ def main():
     api_keys_file = os.path.join("两步版本", "配置文件", "api_keys.json")
 
     ########## 加载 API 配置 ##########
-    api_key, url = load_api_key_and_url(model_id, api_keys_file)
+    api_key, url = load_api_key_and_url(modelid, api_keys_file)
 
     ########## 转换为绝对路径 ##########
     script_path = os.path.abspath(script_path)
@@ -58,7 +57,7 @@ def main():
     # 打印调试信息
     print(f"使用的Python解释器：{sys.executable}")
     print(f"子脚本路径：{script_path}")
-    print(f"模型 ID：{model_id}")
+    print(f"模型 ID：{modelid}")
     print(f"API Key：{api_key}")
     print(f"URL：{url}")
     print(f"输入目录：{directory}")
@@ -67,8 +66,8 @@ def main():
     ########## 构造命令 ##########
     command = [
         sys.executable, script_path,
-        directory, output_dir, sysprompt, api_key, model_id, url,
-        temperature, max_tokens, top_p, frequency_penalty, presence_penalty
+        directory, output_dir, sysprompt, api_key, modelid, url,
+        temperature,  top_p, frequency_penalty, presence_penalty
     ]
 
     ########## 调用子脚本 ##########
