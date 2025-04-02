@@ -1,0 +1,38 @@
+
+整体人物设计：全身、动作
+先做个正面和背面、侧面，先做提示词构建（整体人物的）
+
+分场景分解：
+llm模型获取两个内容，一个是整体人物，一个是分场景的内容
+然后解构为prompt
+
+问题是：lora法，还是提示词法？
+可以先采取提示词法，因为lora法也需要先进行提示词法的训练
+
+提示词法构建好之后，场景提示词的语法如何构建？
+
+按照前景、中景、背景的方式来构建提示词
+前景提示词参考：
+
+breasts, 1girl, nipples, blonde hair, 
+thighhighs, freckles, hairband, large breasts, 
+white thighhighs, looking at viewer, solo, cameltoe,
+ underwear, panties, parted lips, brown eyes, nose, 
+ white panties, topless, navel, turtleneck, thighs,
+ thigh gap, hands on own chest, white sweater, 
+ covered navel, breast suppress, sweater, 
+ breasts squeezed together, thick thighs, 
+ cowboy shot, standing, table, fingerless gloves, 
+ wide hips, black hairband, piercing, twintails, 
+ gloves, bare shoulders, curvy, medium hair,
+  white hairband, see-through, veins, narrow waist,
+   detached sleeves, white leotard, sleeveless, 
+   thick lips, long hair, no bra, blush, cleavag, 
+   masterwork, masterpiece, best quality, 
+   dynamic lighting , dynamic pose,, 
+    dynamic angle, , , (realistic:1.2), (lineless:1.2), 
+    detailed, <lora:Detailer_NoobAI_Incrs_v1:0.75>, , 
+    aged up, adult, depth of field, dynamic lighting, 
+    blurry, cheekbones,
+
+    cameltoe是指女性穿着紧身裤或泳衣时，阴部轮廓的可见性。
