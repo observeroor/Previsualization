@@ -1,0 +1,18 @@
+
+
+
+
+(score_9, score_8_up, score_7_up), 1girl, skinny, ((from below, extremely low angle)), feet, bending over, panties around knees, (((white sneakers))), pink panties down, panties off, puffy pussy, dripping wet pussy, (((panties side sneakers))), close up, pigeon-toed, front view, feet together, wooden floor background
+
+(评分9分, 8分以上, 7分以上), 1女孩, 瘦削身材, ((仰视视角, 极低角度)), 足部, 弯腰姿势, 内裤褪至膝盖处, (((白色运动鞋))), 粉色内裤滑落, 内裤脱卸, 蓬松阴部, 湿漉漉阴部, (((内裤侧边运动鞋))), 特写镜头, 内八字脚, 正面视角, 双脚并拢, 木地板背景
+
+
+
+
+
+Negative prompt: (signature:1.3), (deformed hands:1.3), (deformed fingers:1.3),(3D:1.3), flat colors, bad anatomy, deformed, poorly drawn, low quality, patreon, extra limbs, (blurry:1.3), monochrome, mosaic censorship, censor, oversaturated, (derpibooru_p_low:1.2), clone, cartoon, realistic
+
+Steps: 35, CFG scale: 4, Sampler: Euler a, Seed: 1895460344, Size: 832x1216, nsfw: true, draft: false, width: 832, height: 1216, quantity: 4, workflow: txt2img, baseModel: Pony, Created Date: 2025-03-26T2222:06.0138261Z, Clip skip: 2
+
+反向提示词（Negative prompt），就是我们不想出现什么的描述。例：NSFW 不适合在工作时看的内容，包括限制级，还有低画质相关和一些容易变形身体部位的描述等。
+注：在C站可下载一个叫 Easynegative 的文件，它的作用是把一些常用的反向提示词整合在一起了，让我们只需输入简单的关键词就能得到较好效果。把它放到 xxx/enbeddings 文件夹，需要触发时在 negative prompt 中输入 easynegative 即可生效。
