@@ -13,7 +13,7 @@ def trasnfer_llm(text,sysprompt, api_key, modelid, url, temperature,  top_p, fre
         model=modelid,
         messages=[
             {"role": "system", "content": sysprompt},
-            {"role": "user", "content": f"对下面场景进行描绘:{text}"}
+            {"role": "user", "content": f"{text}"}
         ],
         temperature=float(temperature),
         top_p=float(top_p),
@@ -100,9 +100,9 @@ def describe_img():
     api_key, url = load_api_key_and_url(modelid, api_keys_file)
     sysprompt = """
 强化要点描述、完善背景描述工程
-在提供的txt文档中，有很多的一一对应的场景描述和画面描述。
-画面描述静态精确地刻画了场景里一个定格画面，具有强大的可视性，而场景描述则包含了更多的背景、物品、情节信息。
-我需要对画面描述中进一步做两方面的优化。
+在提供的json文档中，有以编号为key的很多场景，每个场景都有主体、画面视角焦距、细致描述、出场角色、场景描述、分层描述、人物要点、物品要点8类信息。
+我需要根据
+
 一是基于画面描述选取整幅画面的焦点，进行简洁描述，可能是为了突出性张力、性吸引力、强化视觉体验。
 焦点选择标准：[这个画面焦点的选取应当与原来的画面描述相协调融洽，是来自原来的画面描述中最容易被读者看到的地方。
 这个焦点可能是整个画面的视觉中心，可能在画面0.3~0.7之间的位置附近，最突出性张力、性吸引力，可能是一个人物具有强烈性特征身体部位如饱满的胸部或滴下精液的阴户，也可能是两个人物互动的关键地方。]
@@ -128,8 +128,8 @@ def describe_img():
     top_p = 1
     frequency_penalty = 0
     presence_penalty = 0
-    directory = os.path.join("两步版本", "过程文件", "nygs", "5th分镜")
-    output_dir = os.path.join("两步版本", "过程文件", "nygs", "6th提示词", "中景")
+    directory = os.path.join("两步版本", "过程文件", "nygs", "1.5中景转化")
+    output_dir = os.path.join("两步版本", "过程文件", "nygs", "6th提示词", "2.背景细节")
     json_files = get_json_files(directory)
     if not json_files:
         print(f"目录 {directory} 中未找到任何json文件。")
