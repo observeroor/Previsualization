@@ -1,6 +1,7 @@
 import os
 import json
 import sys
+import json
 from openai import OpenAI
 
 # 调用API的函数
@@ -18,6 +19,7 @@ def trasnfer_llm(text,sysprompt, api_key, modelid, url, temperature,  top_p, fre
         top_p=float(top_p),
         frequency_penalty=frequency_penalty,
         presence_penalty=presence_penalty,
+        response_format={"type": "json_object"}
     )
     
     return response.choices[0].message.content
@@ -41,6 +43,18 @@ def load_api_key_and_url(modelid, api_keys_file):
         sys.exit(1)
 
     return api_key[modelid]["api_key"], api_key[modelid]["url"]
+
+
+# 读取json文件内容的函数
+def read_json_file(file_path):
+    """读取json文件内容"""
+    with open(file_path, 'r', encoding='utf-8') as file:
+        return json.load(file)
+# 获取目录下所有json文件的函数
+def get_json_files(directory):
+    """获取指定目录下所有json文件"""
+    return [os.path.join(directory, f) for f in os.listdir(directory) if f.endswith('.json')]
+
 
 # 读取txt文件内容的函数
 def read_txt_file(file_path):
@@ -66,7 +80,7 @@ def save_output(output_dir, original_file, content):
         os.makedirs(output_dir)
     
     base_name = os.path.basename(original_file)
-    output_file = os.path.join(output_dir, base_name.replace('.txt', '_output.json'))
+    output_file = os.path.join(output_dir, base_name)
     
     try:
         json_content = json.loads(content)
@@ -79,7 +93,7 @@ def save_output(output_dir, original_file, content):
     print(f"完成处理: {original_file},结果已保存至 {output_file}")
 
 # 主函数
-def Scene_extraction():
+def describe_img():
     """主函数,逐个处理txt文件并调用API"""
     api_keys_file = os.path.join("两步版本", "配置文件", "api_key.json")
     modelid = "grok-2-latest"  # 模型 ID
@@ -95,40 +109,41 @@ def Scene_extraction():
 焦点描述要求：用1个简单句简洁地直接地描述焦点内容，不要有任何解释和分析，
 
 二是从场景描述中选取内容，进一步丰富画面描述。
-要丰富的内容包括背景和空间描述，人物周围的物品，物品的详细描述，氛围、环境光描述。背景描述要突出人物处境的整体背景，空间描述要描述场景发生的空间，可能包括宽阔与狭窄，人物周围的物品（可能包括室内家具如沙发、床、家具、地板、花洒、玻璃镜等，可能包括个人物品如手机、震动棒、跳弹、安全套、药剂、钥匙、戒指、雨伞等，可能包括户外环境汽车、路灯、背景人群等）可能要根据场景描述中的内容进行增加，也可能根据场景描述中的内容进行细节补充，总之要尽可能更加体现故事发生的环境细节。
-全局输出要求：视觉化描述，直接描述画面内容，描述要简洁明了，不要有任何解释和分析，
+要丰富的内容包括背景和空间描述，人物周围的物品，物品的详细描述，氛围、环境光描述，视觉化描述，不要有任何解释和分析。背景描述要突出人物处境的整体背景，空间描述要描述场景发生的空间，可能包括宽阔与狭窄，人物周围的物品（可能包括室内家具如沙发、床、家具、地板、花洒、玻璃镜等，可能包括个人物品如手机、震动棒、跳弹、安全套、药剂、钥匙、戒指、雨伞等，可能包括户外环境汽车、路灯、背景人群等）可能要根据场景描述中的内容进行增加，也可能根据场景描述中的内容进行细节补充，总之要尽可能更加体现故事发生的环境细节，视觉化描述，不要有任何解释和分析，。
+全局输出要求：视觉化描述，不要有任何解释和分析，直接描述画面内容，描述要简洁明了，
 
-最终输出格式（请严格遵守格式要求，格式中的中括号是内容提示词，不要出现在输出结果中）：
-
-[
-### 场景编号 : XX-XX：
-（优化一：焦点描述）[(焦点内容)]，
-（优化二：背景与细节）[(物体描述),(物体描述),...,(背景描述),]
-]
-
+输出格式，请返回json格式,不要重复输出场景也不要遗漏输出场景，每个场景在输出时保持相同缩进（括号内是内容提示词，不用出现在输出结果中）：
+{
+    "XX-XX(场景编号)":{
+        "焦点描述":"（焦点内容）",
+        "背景与细节":"(物体描述),(物体描述),...,(背景描述)",
+    },
+        "XX-XX(场景编号)":{
+        "焦点描述":"（焦点内容）",
+        "背景与细节":"(物体描述),(物体描述),...,(背景描述)",
+    }
+}
                 """
     temperature = 1.1
     top_p = 1
     frequency_penalty = 0
     presence_penalty = 0
-    directory = os.path.join("两步版本", "过程文件", "nygs", "6th提示词中景")
-    output_dir = os.path.join("两步版本", "过程文件", "nygs", "6th提示词","焦点与背景")
-
-
-    txt_files = get_txt_files(directory)
-    if not txt_files:
-        print(f"目录 {directory} 中未找到任何txt文件。")
+    directory = os.path.join("两步版本", "过程文件", "nygs", "5th分镜")
+    output_dir = os.path.join("两步版本", "过程文件", "nygs", "6th提示词", "中景")
+    json_files = get_json_files(directory)
+    if not json_files:
+        print(f"目录 {directory} 中未找到任何json文件。")
         return
-
-    for file_path in txt_files:
+    for file_path in json_files:
         print(f"正在处理: {file_path}...")
         try:
-            text = read_txt_file(file_path)
-            result =trasnfer_llm(text, sysprompt, api_key, modelid, url, temperature,  top_p, frequency_penalty, presence_penalty)
+            # 这里假设json文件的内容是一个字符串，可以直接传递给API
+            text = read_json_file(file_path)
+            result = trasnfer_llm(str(text), sysprompt, api_key, modelid, url, temperature, top_p, frequency_penalty, presence_penalty)
             save_output(output_dir, file_path, result)
         except Exception as e:
             print(f"处理 {file_path} 时出错: {e}")
             continue
 
 if __name__ == "__main__":
-    Scene_extraction()
+    describe_img()
