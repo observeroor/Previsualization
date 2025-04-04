@@ -39,9 +39,9 @@ def merge_json_files(folder1, folder2, output_folder):
             json.dump(merged_json, out_file, ensure_ascii=False, indent=4)
     
 # 定义路径
-folder1 = "两步版本/过程文件/nygs/6th提示词/1.中景"
-folder2 = "两步版本/过程文件/nygs/5th分镜"
-output_folder = "两步版本/过程文件/nygs/6th提示词/1.5中景转化"
+folder1 = os.path.join("两步版本", "过程文件", "nygs", "6th提示词", "1.中景")
+folder2 = os.path.join("两步版本", "过程文件", "nygs", "5th分镜")
+output_folder = os.path.join("两步版本", "过程文件", "nygs", "6th提示词","1.5中景转化")
 
 # 执行合并
 merge_json_files(folder1, folder2, output_folder)
