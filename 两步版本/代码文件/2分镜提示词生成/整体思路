@@ -1,4 +1,60 @@
 1.整体功能列表
+1.1主要描述生成
+1.2背景细节生成
+1.3合成提示词
+
+2
+
+
+
+    "05-06": {
+        "焦点描述": "赵成杰揽着小慧的腰。",
+        "背景与细节": "咖啡馆内光线明亮,窗外是冷清的街道和青灰色的天空,小慧的黑色太阳裙紧贴身体,金色高跟凉鞋在行走中闪闪发光,赵成杰的深色T恤和牛仔裤紧贴身体,街道两旁有几棵树,远处可见电影院的招牌。",
+        "主体": "小慧和赵成杰在街道上行走，小慧穿着金色高跟凉鞋和黑色太阳裙，赵成杰揽着小慧的腰，两人走向电影院，可反在咖啡馆内观望",
+        "画面视角焦距": "平视,35mm photograph",
+        "细致描述": "小慧肤色白皙，体型纤细，穿着金色高跟凉鞋和黑色太阳裙，颈部颀美，胸部被太阳裙包裹，背部挺直，屁股和阴部被太阳裙覆盖，头部微倾，头发披肩，胳膊自然下垂，手指轻握，
+        脚上穿着金色高跟凉鞋，大腿和小腿纤细修长;赵成杰肤色偏黑，体型健壮，大咧咧地揽着小慧的腰，颈部粗壮，胸部和背部被衬衫覆盖，屁股和阴部被裤子遮盖，头部微低，头发短，
+        胳膊揽着小慧，手指紧握，大腿和小腿健壮;可反肤色偏白，体型中等，坐在咖啡馆内，身体微倾，颈部自然伸展，胸部和背部被衬衫覆盖，屁股和阴部被裤子遮盖，头部微侧，头发整齐，胳膊放在桌子上，手指轻握，大腿和小腿被桌子遮盖",
+        "出场角色": "可反,小慧,赵成杰",
+        "场景描述": "从35mm焦距视角平视，可反在咖啡馆内看到小慧和赵成杰出现在R镇的街道上。小慧穿着金色高跟凉鞋和黑色太阳裙，露出纤细的双腿，赵成杰则大咧咧地揽着小慧的腰，两人走向电影院。可反内心复杂，悄悄跟随。",
+        "分层描述": "前景/小慧穿着金色高跟凉鞋和黑色太阳裙，露出纤细的双腿/中景/赵成杰大咧咧地揽着小慧的腰，两人走向电影院/背景/咖啡馆内光线明亮，窗外是冷清的街道和青灰色的天空",
+        "人物要点": "小慧穿着性感/小慧露出纤细双腿/赵成杰揽着小慧腰/两人走向电影院",
+        "物品要点": "金色高跟凉鞋/黑色太阳裙/咖啡馆/街道"
+    },
+
+    主体+细致描述+背景与细节
+
+    方案一，注释法
+    细致描述做拆解，加入主体中
+
+两个人，女性（亚洲女孩，24岁，肤色白皙，体型纤细，穿着金色高跟凉鞋和黑色太阳裙，颈部颀美，胸部被太阳裙包裹，背部挺直，屁股和阴部被太阳裙覆盖，头部微倾，头发披肩，胳膊自然下垂，手指轻握，
+        脚上穿着金色高跟凉鞋，大腿和小腿纤细修长）和男人（亚洲男人，27岁，肤色偏黑，体型健壮，大咧咧地揽着小慧的腰，颈部粗壮，胸部和背部被衬衫覆盖，屁股和阴部被裤子遮盖，头部微低，头发短，
+        胳膊揽着小慧，手指紧握，大腿和小腿健壮）在街道上行走，女性穿着金色高跟凉鞋和黑色太阳裙，男性揽着女性的腰，两人走向电影院，另一个男性在咖啡馆内观望
+平视,35mm photograph，女性的黑色太阳裙紧贴身体,金色高跟凉鞋在行走中闪闪发光,男性的深色T恤和牛仔裤紧贴身体,街道两旁有几棵树,远处可见电影院的招牌
+
+
+masterpiece, best quality, amazing quality, very aesthetic, newest, depth of field,
+ masterpiece, best quality, very aesthetic, 8k,masterpiece, best quality,realistic, masterpiece, best quality, 8k,
+  simple_background, half close-up, sexy pose, blushing,Two people, a woman (Asian girl, 24 years old, with fair skin, slender build, wearing golden high-heeled sandals and a black sundress that wraps around her chest, covering her buttocks and pubic area. Her neck is elegant, her back straight, her head slightly tilted with long hair flowing over her shoulders, arms hanging naturally with fingers slightly curled, her legs slender and elongated in the golden high-heeled sandals) and a man (Asian man, 27 years old, with darker skin, robust build, casually holding the woman's waist, his neck thick, shirt covering his chest and back, pants covering his buttocks and groin, head slightly lowered, short hair, arms wrapped around the woman, fingers tightly gripping, legs strong and muscular) walking on the street. The woman's black sundress clings to her body, accentuating her form, her golden high-heeled sandals glinting with each step. The man, in a tight dark T-shirt and jeans, holds her possessively. They are heading towards a cinema, while another man watches from a nearby café.
+Eye-level, 35mm photograph. The woman's sundress tightly hugs her figure, the golden sandals sparkling as she walks. The man's attire clings to his muscular physique. Trees line the street, and the cinema sign is visible in the distance.
+  
+  
+  masterpiece, best quality, amazing quality, very aesthetic, newest, depth of field,masterpiece, best quality, very aesthetic, 8k,masterpiece, best quality,realistic, masterpiece, best quality, 8k,simple_background, half close-up, sexy pose, blushing,Two people
+  Two people, a woman (Asian girl, 24 years old, with fair skin, slender build, wearing golden high-heeled sandals and a black sundress that wraps around her chest, covering her buttocks and pubic area. Her neck is elegant, her back straight, her head slightly tilted with long hair flowing over her shoulders, arms hanging naturally with fingers slightly curled, her legs slender and elongated in the golden high-heeled sandals) and a man (Asian man, 27 years old, with darker skin, robust build, casually holding the woman's waist, his neck thick, shirt covering his chest and back, pants covering his buttocks and groin, head slightly lowered, short hair, arms wrapped around the woman, fingers tightly gripping, legs strong and muscular) walking on the street. 
+  35mm photograph. The woman's sundress tightly hugs her figure, the golden sandals sparkling as she walks. The man's attire clings to his muscular physique. Trees line the street, and the cinema sign is visible in the distance.
+  
+  
+  , a woman (Asian girl, 24 years old, with fair skin, slender build, wearing golden high-heeled sandals and a black sundress that wraps around her chest, covering her buttocks and pubic area. Her neck is elegant, her back straight, her head slightly tilted with long hair flowing over her shoulders, arms hanging naturally with fingers slightly curled, her legs slender and elongated in the golden high-heeled sandals) and a man (Asian man, 27 years old, with darker skin, robust build, casually holding the woman's waist, his neck thick, shirt covering his chest and back, pants covering his buttocks and groin, head slightly lowered, short hair, arms wrapped around the woman, fingers tightly gripping, legs strong and muscular) walking on the street. The woman's black sundress clings to her body, accentuating her form, her golden high-heeled sandals glinting with each step. The man, in a tight dark T-shirt and jeans, holds her possessively. They are heading towards a cinema, while another man watches from a nearby café.35mm photograph. The woman's sundress tightly hugs her figure, the golden sandals sparkling as she walks. The man's attire clings to his muscular physique. Trees line the street, and the cinema sign is visible in the distance.
+   asian girl, small head, 
+  pretty girl, korean girl, ((slim body)), (small breasts), dynamic angle, dynamic pose, 
+  ear piercings, nswf, portrait, girl, naked, in water, wet skin,
+
+        "背景与细节": "咖啡馆内光线明亮,窗外是冷清的街道和青灰色的天空,小慧的黑色太阳裙紧贴身体,金色高跟凉鞋在行走中闪闪发光,赵成杰的深色T恤和牛仔裤紧贴身体,街道两旁有几棵树,远处可见电影院的招牌。",
+        "主体": "女人与和男人在街道上行走，男人揽着女人的腰；女人（24岁，韩国人）穿着金色高跟凉鞋和黑色太阳裙,黑色太阳裙紧贴身体,金色高跟凉鞋在行走中闪闪发光，男人(27岁，亚洲人，深色T恤和牛仔裤紧贴身体)揽着女人的腰，两人走向电影院
+
+
+
+old****
 1.1整体人物设计
 2.1场景人物细节
 3.1场景辅助细节
