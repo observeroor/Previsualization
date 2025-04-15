@@ -3,6 +3,22 @@
         "api_key": "xai-JtSPb3Wz6e9FJ1J5pDh3OoMeOvK7aGntYVPF4MlD7YXeTUDgmCg9WP6Y5fPqK00LMsJzbuamd7R2jVWI",
         "url": "https://api.x.ai/v1"
     },
+    "grok-3": {
+        "api_key": "xai-JtSPb3Wz6e9FJ1J5pDh3OoMeOvK7aGntYVPF4MlD7YXeTUDgmCg9WP6Y5fPqK00LMsJzbuamd7R2jVWI",
+        "url": "https://api.x.ai/v1"
+    },
+    "grok-3-mini": {
+        "api_key": "xai-JtSPb3Wz6e9FJ1J5pDh3OoMeOvK7aGntYVPF4MlD7YXeTUDgmCg9WP6Y5fPqK00LMsJzbuamd7R2jVWI",
+        "url": "https://api.x.ai/v1"
+    },
+    "grok-3-mini-fast": {
+        "api_key": "xai-JtSPb3Wz6e9FJ1J5pDh3OoMeOvK7aGntYVPF4MlD7YXeTUDgmCg9WP6Y5fPqK00LMsJzbuamd7R2jVWI",
+        "url": "https://api.x.ai/v1"
+    },
+    "grok-2-image": {
+        "api_key": "xai-JtSPb3Wz6e9FJ1J5pDh3OoMeOvK7aGntYVPF4MlD7YXeTUDgmCg9WP6Y5fPqK00LMsJzbuamd7R2jVWI",
+        "url": "https://api.x.ai/v1"
+    },
     "deepseek-r1-250120": {
         "api_key": "09d01e0f-0a98-44d6-93c6-5088b4307f82",
         "url": "https://ark.cn-beijing.volces.com/api/v3/"

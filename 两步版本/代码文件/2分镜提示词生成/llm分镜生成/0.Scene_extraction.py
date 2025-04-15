@@ -83,7 +83,7 @@ def save_output(output_dir, original_file, content):
 def Scene_extraction():
     """主函数,逐个处理txt文件并调用API"""
     api_keys_file = os.path.join("两步版本", "配置文件", "api_key.json")
-    modelid = "grok-2-latest"  # 模型 ID
+    modelid = "grok-3"  # 模型 ID
     api_key, url = load_api_key_and_url(modelid, api_keys_file)
     sysprompt = """
                 色情小说可视化工程（从章节提取分镜阶段）：

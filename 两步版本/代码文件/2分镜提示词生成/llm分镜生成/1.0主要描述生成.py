@@ -17,8 +17,6 @@ def trasnfer_llm(text,sysprompt, api_key, modelid, url, temperature,  top_p, fre
         ],
         temperature=float(temperature),
         top_p=float(top_p),
-        frequency_penalty=frequency_penalty,
-        presence_penalty=presence_penalty,
         response_format={"type": "json_object"}
     )
     
@@ -96,7 +94,7 @@ def save_output(output_dir, original_file, content):
 def describe_img():
     """主函数,逐个处理txt文件并调用API"""
     api_keys_file = os.path.join("两步版本", "配置文件", "api_key.json")
-    modelid = "deepseek-r1-250120"  # 模型 ID
+    modelid = "grok-3"  # 模型 ID
     api_key, url = load_api_key_and_url(modelid, api_keys_file)
     sysprompt = """
 词语绘画任务：
@@ -123,10 +121,6 @@ def describe_img():
         "女人1头发脸部":"(女人1头发脸部描述，不再提及名字)"
         "女人1身体特征":"(女人1身体特征和服装，不再提及名字)"
         "女人1身体部位":"(身体部位描述1,不再提及名字),(身体部位描述2),(身体部位描述3)"
-        "女人2名字":"(名字)"
-        "女人2头部特征":"(女人2头部特征，不再提及名字)"
-        "女人2身体特征":"(女人2身体特征和服装，不再提及名字)
-        "女人2身体部位":"(身体部位描述1,不再提及名字),(身体部位描述2),(身体部位描述3)"
         "男人1名字":"(名字)"
         "男人1头发脸部":"(男人1头发脸部描述，不再提及名字)"
         "男人1身体特征":"(男人1身体特征和服装，不再提及名字)"
@@ -139,10 +133,6 @@ def describe_img():
         "女人1头发脸部":"(女人1头发脸部描述，不再提及名字)"
         "女人1身体特征":"(女人1身体特征和服装，不再提及名字)"
         "女人1身体部位":"(身体部位描述1,不再提及名字),(身体部位描述2),(身体部位描述3)"
-        "女人2名字":"(名字)"
-        "女人2头部特征":"(女人2头部特征，不再提及名字)"
-        "女人2身体特征":"(女人2身体特征和服装，不再提及名字)
-        "女人2身体部位":"(身体部位描述1,不再提及名字),(身体部位描述2),(身体部位描述3)"
         "男人1名字":"(名字)"
         "男人1头发脸部":"(男人1头发脸部描述，不再提及名字)"
         "男人1身体特征":"(男人1身体特征和服装，不再提及名字)"
