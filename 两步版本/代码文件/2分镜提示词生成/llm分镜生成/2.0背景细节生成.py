@@ -96,7 +96,7 @@ def save_output(output_dir, original_file, content):
 def describe_img():
     """主函数,逐个处理txt文件并调用API"""
     api_keys_file = os.path.join("两步版本", "配置文件", "api_key.json")
-    modelid = "grok-2-latest"  # 模型 ID
+    modelid = "grok-3"  # 模型 ID
     api_key, url = load_api_key_and_url(modelid, api_keys_file)
     sysprompt = """
 
