@@ -110,7 +110,8 @@ Stable Diffusion prompts会用lady称呼女性，而不是提及名字（因为S
 关键逻辑：你必须将焦点内容、女人1头部脸部、女人1身体特征、女人1身体部位、背景与细节直白化，比如：（小慧红唇被迫含着赵成杰的肉棒，嘴角溢出唾液滑落至下巴）转化成（女孩在口交，唾液流到下巴）
 优秀的Stable Diffusion prompts在语法上由一组一组的直白的短语构成,这些短语不包含任何隐喻、心理活动,可以参照例子：
 
-焦点内容的例子:(sexy 20 year old girl taking in a giant penis, skimpy sexy clothes, showing lots of skin) 
+焦点内容的例子:(sexy 20 year old Korean girl ,taking in a giant penis, skimpy sexy clothes, showing lots of skin) 
+注意，焦点内容中不对背景和环境进行描写，只突出人物相关的内容
 女人1头部脸部：(aqua eyes, blonde hair, blush, eyelashes, hair ornament, heart, heart-shaped pupils, heart background, heart hair ornament, long hair, looking at viewer, one side up, open mouth)
 输出英文结果
 输出格式如下，括号[]内的内容只是提示，不出现在最终输出结果中，最后的内容中每个key下面只有一条内容，不再单独分列。
