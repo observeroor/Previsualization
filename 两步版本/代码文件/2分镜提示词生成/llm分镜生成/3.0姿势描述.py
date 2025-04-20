@@ -112,7 +112,7 @@ Stable Diffusion prompts会用Korean girl称呼女性，而不是提及名字（
 直白化可以参考的例子：（粉嫩穴口暴露）转化成（Standing split）
 优秀的Stable Diffusion prompts在语法上直白的短语构成,不包含任何隐喻、心理活动，对性器官会采用标准描述而不是采用比喻
 用短语直白的描述身体姿势
-这是包含许多种用于描述身体姿势的词组列表，可以直接从列表选取，也可以参照其进行编写：{crouching|squatting|low_squat|legs_apart|wide_stance|knees_up|one_knee_up|one_knee_on_the_ground|leaning_forward|hand_on_knee|hand_between_legs|side_profile_squat|wall_squat|sitting_on_heels|provocative_pose|suggestive_pose|spreading_legs|legs_up|arched_back|looking_back_seductively|resting_on_one_knee|bent_over|all_fours|lying_on_stomach|lying_on_side|thigh_gap|legs_together|hips_thrust_forward}
+身体姿势的描述例子：{}
 会用性行为姿势专有名词描述当前性行为行为
 优秀的Stable Diffusion prompts在语法上由一组一组的直白的短语构成,这些短语不包含任何隐喻、心理活动,可以参照例子：
 
@@ -126,21 +126,17 @@ Stable Diffusion prompts会用Korean girl称呼女性，而不是提及名字（
 {
     "XX-XX[场景编号]":{
         "焦点内容":"[焦点内容]"
-        "女人身体姿势":"用短语直白的描述女性角色的身体姿势,可以从给出的列表中选取,也可以根据场景编写,在此条目中特殊要求是将单词用_连接"
+        "女人身体姿势":"用短语直白的描述女性角色的身体姿势,在此条目中特殊要求是将单词用_连接"
         "性行为":"用性行为姿势的名词描述性行为,在此条目中特殊要求是将单词用_连接"
         "女人1头部脸部":"[女人1头部脸部]"
         "女人1身体特征":"[女人1身体特征]"
         "女人1身体部位":"[女人1身体部位]"
-        "背景与细节":"[背景与细节]"
-    },   
+        "[背景与细节]":"[背景与细节]"
+        [女人1身体特征]
+        ([焦点内容]:1.3),([女人1头部脸部]:1.1),([女人1身体特征]:1.1),([女人1身体部位]:1.1),[背景与细节]
+    },
     "XX-XX[场景编号]":{
-        "焦点内容":"[焦点内容]"
-        "女人身体姿势":"用短语直白的描述女性角色的身体姿势,可以从给出的列表中选取,也可以根据场景编写,在此条目中特殊要求是将单词用_连接"
-        "性行为":"用性行为姿势的名词描述性行为,在此条目中特殊要求是将单词用_连接"
-        "女人1头部脸部":"[女人1头部脸部]"
-        "女人1身体特征":"[女人1身体特征]"
-        "女人1身体部位":"[女人1身体部位]"
-        "背景与细节":"[背景与细节]"
+        ([焦点内容]:1.3),([女人1头部脸部]:1.1),([女人1身体特征]:1.1),([女人1身体部位]:1.1),[背景与细节]
     },
 }
 
