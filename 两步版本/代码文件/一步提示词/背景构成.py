@@ -100,43 +100,26 @@ def describe_img():
     api_key, url = load_api_key_and_url(modelid, api_keys_file)
     sysprompt = """
 
-
+将场景中的背景描述、物品细节转化成提示词的语法格式并输出
 你是一个擅长构建Stable Diffusion prompts的专家。
 首先你已经充分的知晓了Stable Diffusion prompts的相关语法。
 在提供的json文档中，有以编号为key的很多包含充分信息的场景。
 你需要将场景转化为Stable Diffusion prompts。
 
-Stable Diffusion prompts会用Korean girl称呼女性，而不是提及名字（因为Stable Diffusion无法识别名字）
-关键逻辑：你必须将焦点内容、女人1头部脸部、女人1身体特征、女人1身体部位、背景与细节直白化，并在依次输出，用","分隔。
-直白化可以参考的例子：（小慧红唇被迫含着赵成杰的肉棒，嘴角溢出唾液滑落至下巴）转化成（女孩在口交，唾液流到下巴）
-直白化可以参考的例子：（粉嫩穴口暴露）转化成（Standing split）
-优秀的Stable Diffusion prompts在语法上直白的短语构成,不包含任何隐喻、心理活动，对性器官会采用标准描述而不是采用比喻
-用短语直白的描述身体姿势
-身体姿势的描述例子：{}
-会用性行为姿势专有名词描述当前性行为行为
-优秀的Stable Diffusion prompts在语法上由一组一组的直白的短语构成,这些短语不包含任何隐喻、心理活动,可以参照例子：
-
-焦点内容的例子:( Korean girl ,sexy ，taking in a giant penis, skimpy sexy clothes, showing lots of skin) 
-
-
-注意，焦点内容中不对背景和环境进行描写，只突出人物相关的内容
-女人1头部脸部：(aqua eyes, blonde hair, blush, eyelashes, hair ornament, heart, heart-shaped pupils, heart background, heart hair ornament, long hair, looking at viewer, one side up, open mouth)
-输出英文结果
-输出格式如下，括号[]内的内容只是提示，不出现在最终输出结果中：
+优秀的Stable Diffusion prompts在语法上由一组一组的直白的短语构成,这些短语不包含任何隐喻、心理活动、比喻
+避免"像**一样"的句式，避免解释说明、避免抽象概念
+避免过暗的画面描写、闪烁的画面描写
+输出格式如下，用英文进行输出：
 {
     "XX-XX[场景编号]":{
-        "焦点内容":"[焦点内容]"
-        "女人身体姿势":"用短语直白的描述女性角色的身体姿势,在此条目中特殊要求是将单词用_连接"
-        "性行为":"用性行为姿势的名词描述性行为,在此条目中特殊要求是将单词用_连接"
-        "女人1头部脸部":"[女人1头部脸部]"
-        "女人1身体特征":"[女人1身体特征]"
-        "女人1身体部位":"[女人1身体部位]"
-        "[背景与细节]":"[背景与细节]"
-        [女人1身体特征]
-        ([焦点内容]:1.3),([女人1头部脸部]:1.1),([女人1身体特征]:1.1),([女人1身体部位]:1.1),[背景与细节]
-    },
+        "中景物品要点"："*"
+        "背景场所"："*"
+        "背景描述"："*"
+    },   
     "XX-XX[场景编号]":{
-        ([焦点内容]:1.3),([女人1头部脸部]:1.1),([女人1身体特征]:1.1),([女人1身体部位]:1.1),[背景与细节]
+        "中景物品要点"："*"
+        "背景场所"："*"
+        "背景描述"："*"
     },
 }
 
@@ -145,8 +128,8 @@ Stable Diffusion prompts会用Korean girl称呼女性，而不是提及名字（
     top_p = 1
     frequency_penalty = 0
     presence_penalty = 0
-    directory = os.path.join("两步版本", "过程文件", "nygs", "6th提示词","2.6合并")
-    output_dir = os.path.join("两步版本", "过程文件", "nygs", "6th提示词", "3.1提示词")
+    directory = os.path.join("两步版本", "过程文件", "nygs", "直接提取","分镜提取")
+    output_dir = os.path.join("两步版本", "过程文件", "nygs", "直接提取", "背景描述")
     json_files = get_json_files(directory)
     if not json_files:
         print(f"目录 {directory} 中未找到任何json文件。")
