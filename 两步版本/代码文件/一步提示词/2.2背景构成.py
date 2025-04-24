@@ -128,8 +128,8 @@ def describe_img():
     top_p = 1
     frequency_penalty = 0
     presence_penalty = 0
-    directory = os.path.join("两步版本", "过程文件", "nygs", "直接提取","分镜提取")
-    output_dir = os.path.join("两步版本", "过程文件", "nygs", "直接提取", "背景描述")
+    directory = os.path.join("两步版本", "过程文件", "nygs", "5.1提示词","1.0分镜提取")
+    output_dir = os.path.join("两步版本", "过程文件", "nygs", "5.1提示词", "2.2背景构成")
     json_files = get_json_files(directory)
     if not json_files:
         print(f"目录 {directory} 中未找到任何json文件。")

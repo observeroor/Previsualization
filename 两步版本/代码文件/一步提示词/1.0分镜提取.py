@@ -140,7 +140,7 @@ def Scene_extraction():
     frequency_penalty = 0
     presence_penalty = 0
     directory = os.path.join("两步版本", "过程文件", "nygs", "4th大文件分割")
-    output_dir = os.path.join("两步版本", "过程文件", "nygs", "直接提取", "分镜提取")
+    output_dir = os.path.join("两步版本", "过程文件", "nygs", "5.1提示词", "1.0分镜提取")
 
 
     txt_files = get_txt_files(directory)

@@ -99,58 +99,36 @@ def describe_img():
     modelid = "grok-3"  # 模型 ID
     api_key, url = load_api_key_and_url(modelid, api_keys_file)
     sysprompt = """
-为场景中人物的性行为寻找对应的性行为类别和性行为姿势描述词
-在提供的json文档中，有以编号为key的很多包含充分信息的场景。
-你需要根据提供的信息判断该场景中人物进行的性行为的类型和姿势。
-性行为类别如：
-Vaginal_intercourse
-blowjob
-Footjob
-Titjob
-Breast_sex
-Anal_intercourse
-性行为姿势的描述词包括但不限于下面列表：
-69_Position
-Butterfly_Position
-Coital_Alignment_Technique_(CAT)
-Cowgirl_Position
-Doggy_Style
-Doggy_Style_(Anal)
-Face-sitting
-Fingering
-Froggy_Style
-Lateral_Coital_Position
-Lap_Dance_Position
-Laying-down_Doggy_Style
-Lotus_Position
-Lotus_Flower
-Missionary_Position
-Missionary_(Anal)
-Modified_T-Square
-Piledriver
-Prone_Position
-Receiving_Partner_on_Top_(Anal)
-Reverse_Cowgirl_Position
-Reverse_Missionary
-Scissoring
-Seventh_Posture
-Spoons_Position
-Spoons_(Anal)
-Stopperage
-Suspended_Congress/Ekiben
-T-Square_Position
-Viennese_Oyster
-Wheelbarrow
 
-最终输出格式如下：
+将背景描述转化成提示词的语法格式
+你是一个擅长构建Stable Diffusion prompts的专家。
+首先你已经充分的知晓了Stable Diffusion prompts的相关语法。
+在提供的json文档中，有以编号为key的很多包含充分信息的场景。
+你需要将场景转化为Stable Diffusion prompts。
+
+Stable Diffusion prompts会用Korean girl称呼女性，而不是提及名字（因为Stable Diffusion无法识别名字）
+关键逻辑：你必须将焦点内容、女人1头部脸部、女人1身体特征、女人1身体部位、背景与细节直白化，并在依次输出，用","分隔。
+直白化可以参考的例子：（小慧红唇被迫含着赵成杰的肉棒，嘴角溢出唾液滑落至下巴）转化成（女孩在口交，唾液流到下巴）
+直白化可以参考的例子：（两条腿摆出180度的高难度姿势）转化成（Standing split）
+优秀的Stable Diffusion prompts在语法上直白的短语构成,不包含任何隐喻、心理活动，对性器官会采用标准描述而不是采用比喻
+不采用“像**一样”的描述方式，不出现messy等增加混乱度的词语
+用短语直白的描述身体姿势
+这是包含许多种用于描述身体姿势的词组列表，可以直接从列表选取，也可以参照其进行编写：{crouching|squatting|low_squat|legs_apart|wide_stance|knees_up|one_knee_up|one_knee_on_the_ground|leaning_forward|hand_on_knee|hand_between_legs|side_profile_squat|wall_squat|sitting_on_heels|provocative_pose|suggestive_pose|spreading_legs|legs_up|arched_back|looking_back_seductively|resting_on_one_knee|bent_over|all_fours|lying_on_stomach|lying_on_side|thigh_gap|legs_together|hips_thrust_forward}
+优秀的Stable Diffusion prompts在语法上由一组一组的直白的短语构成,这些短语不包含任何隐喻、心理活动,可以参照例子：
+
+焦点内容的例子:( Korean girl ,sexy ，taking in a giant penis, skimpy sexy clothes, showing lots of skin) 
+
+
+注意，焦点内容中不对背景和环境进行描写，只突出人物相关的内容
+女人1头部脸部：(aqua eyes, blonde hair, blush, eyelashes, hair ornament, heart, heart-shaped pupils, heart background, heart hair ornament, long hair, looking at viewer, one side up, open mouth)
+输出英文结果
+输出格式如下，括号[]内的内容只是提示，不出现在最终输出结果中：
 {
     "XX-XX[场景编号]":{
-    "性行为类别":""
-    "性行为姿势":""
-    },
+
+    },   
     "XX-XX[场景编号]":{
-    "性行为类别":""
-    "性行为姿势":""
+
     },
 }
 
@@ -159,8 +137,8 @@ Wheelbarrow
     top_p = 1
     frequency_penalty = 0
     presence_penalty = 0
-    directory = os.path.join("两步版本", "过程文件", "nygs", "直接提取","分镜提取")
-    output_dir = os.path.join("两步版本", "过程文件", "nygs", "直接提取","姿势描述")
+    directory = os.path.join("两步版本", "过程文件", "nygs", "5.1提示词","1.0分镜提取")
+    output_dir = os.path.join("两步版本", "过程文件", "nygs", "5.1提示词", "2.0提示词构成")
     json_files = get_json_files(directory)
     if not json_files:
         print(f"目录 {directory} 中未找到任何json文件。")
