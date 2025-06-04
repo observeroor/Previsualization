@@ -1,0 +1,5 @@
+在json格式文件中，保存了很多的id和prompts
+在本地运行着一个comfyUI
+编写一个python脚本，会调用comfyUI的api
+将json格式文件中的prompts依次传输给comfyUI
+comfyui会返回生成的图片，这个脚本会将生成的图片保存到本地指定的文件夹
